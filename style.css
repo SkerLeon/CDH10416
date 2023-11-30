@@ -551,6 +551,11 @@ main{
     font-weight: bold;
     border: none;
     color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .filter-item-btn:hover{
     background-color: #F4B410;
