@@ -8,7 +8,7 @@ body{
 header{
     position: relative;
     height: 331px;
-    margin-bottom: 16%;
+    margin-bottom: 18%;
     z-index: 0;
 }
 main{
@@ -149,7 +149,7 @@ main{
     gap: 10px;
     position: absolute;
     left: 50%;
-    bottom: 130px;
+    bottom: 22%;
 }
 .banner-round{
     width: 20px;
@@ -213,14 +213,14 @@ main{
     bottom: 50px;
 }
 .service h3{
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     color: #FFF8E5;
     margin-bottom: 23px;
 }
 .service p{
     color: #FFF8E5;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 50px;
 }
 .footer-logo{
@@ -230,7 +230,7 @@ main{
 }
 .conact h3{
     text-align: right;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     color: #FFF8E5;
     margin-bottom: 23px;
@@ -238,7 +238,7 @@ main{
 .conact p{
     text-align: right;
     color: #FFF8E5;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 50px;
 }
 .declaration{
