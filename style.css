@@ -634,7 +634,7 @@ main{
     margin-bottom: 51px;
 }
 .dog-activity-items{
-    width: 64%;
+    width: 861px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -732,23 +732,24 @@ main{
     position: relative;
 }
 .dogdonate-conter{
-    position: absolute;
-    right: 735px;
+    position: relative;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .dogdonate-conter-img1{
     margin-top: 80px;
-    width: 549px;
-    height: 490px;
+    width: 85%;
     aspect-ratio: 549/490;
     margin-bottom: 67px;
 }
 .dogdonate-conter-img1 img{
     width: 100%;
 }
-.dogdonate-conter-text p{
-    width: 542px;
-    height: 485px;
-    aspect-ratio: 542/485;
+.dogdonate-conter-text{
+    width: 85%;
     font-size: 28px;
     line-height: 220%;
     letter-spacing: 3px;
@@ -756,16 +757,16 @@ main{
 }
 .dogdonate-conter-img2{
     position: absolute;
-    right: 20px;
-    
+    right: 10%;
+    bottom: -15%;
 }
 .dogdonate-conter-img2 img{
     width: 100%;
 }
 .dogdonate-conter-bg{
     position: absolute;
-    top: 0px;
-    left: -65px;
+    top: 0%;
+    left: 0%;
 }
 .dogdonate-form{
     width: 48%;
@@ -779,7 +780,7 @@ main{
     right: 0px;
 }
 .dogdonate-form-donationamount{
-    width: 51%;
+    width: 57%;
     margin-top: 60px;
     display: flex;
     flex-direction: column;
@@ -788,7 +789,7 @@ main{
     position: relative;
 }
 .dogdonate-form-donationamount h2{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     color: #FFF8E5;
     margin-bottom: 41px;
@@ -832,8 +833,9 @@ main{
 }
 .donationamount-radio-img{
     position: absolute;
-    top: 90px;
+    top: 26.5%;
 }
+
 .donationamount-customize{
     width: 100%;
     height: 57px;
@@ -856,7 +858,7 @@ main{
     margin-top: 60px;
 }
 .dogdonate-form-data h2{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
     color: #FFF8E5;
     margin-bottom: 41px;
