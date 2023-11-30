@@ -149,13 +149,17 @@ main{
     gap: 10px;
     position: absolute;
     left: 50%;
-    bottom: 110px;
+    bottom: 130px;
 }
 .banner-round{
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: #F7F1F1;
+}
+.banner-round:hover{
+    background-color: #8F8686;
+    cursor: pointer;
 }
 .banner-wave{
     position: absolute;
