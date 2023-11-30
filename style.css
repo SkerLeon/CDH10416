@@ -29,7 +29,7 @@ main{
 .nav ul{
     display: flex;
     justify-content: space-around;
-    gap: 29px;
+    gap: 30px;
     list-style-type: none;
 }
 .nav li{
