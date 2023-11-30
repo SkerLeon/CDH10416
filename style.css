@@ -528,7 +528,7 @@ main{
     background-color: #F7F6F188;
     border-radius: 154px;
     position: absolute;
-    top: 53%;
+    top: 52%;
 }
 .item-dog-nickname span{
     font-size: 24px;
@@ -540,6 +540,7 @@ main{
     font-weight: bold;
     text-align: center;
     margin-bottom: 16px;
+    line-height: 30px;
 }
 .filter-item-btn{
     width: 122px;
@@ -896,14 +897,14 @@ main{
     display: none;
     width: 15px;
     height: 15px;
-    background-color: #474143;
+    background-color: #5b595a;
     border-radius: 3px;
 }
 .radio-style-checked-no{
     display: none;
     width: 15px;
     height: 15px;
-    background-color: #474143;
+    background-color: #5b595a;
     border-radius: 3px;
 }
 .data-receipt-radio>input{
