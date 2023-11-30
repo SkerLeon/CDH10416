@@ -172,12 +172,14 @@ main{
     filter: drop-shadow(0px -9px 20px rgba(0, 0, 0, 0.15));
 }
 .banner-wave-cover{
-    background-color:#FFF8E5;
     height: 5%;
     width: 100%;
     position: absolute;
     bottom: -4%;
     z-index: 3;
+}
+.banner-wave-cover img{
+    width: 100%;
 }
 
 
@@ -241,7 +243,7 @@ main{
 }
 .declaration{
     color: #FFF8E5;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -760,7 +762,7 @@ main{
     left: -65px;
 }
 .dogdonate-form{
-    width: 661px;
+    width: 48%;
     height: 1365px;
     background-color: #474143;
     border-radius: 70px;
@@ -771,6 +773,7 @@ main{
     right: 0px;
 }
 .dogdonate-form-donationamount{
+    width: 51%;
     margin-top: 60px;
     display: flex;
     flex-direction: column;
@@ -826,7 +829,7 @@ main{
     top: 90px;
 }
 .donationamount-customize{
-    width: 297px;
+    width: 100%;
     height: 57px;
     border-radius: 190px;
     background-color: #F6F3F3;
@@ -840,7 +843,7 @@ main{
     -webkit-appearance: none;
 }
 .dogdonate-form-data{
-    width: 48%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -853,12 +856,13 @@ main{
     margin-bottom: 41px;
 }
 .form-data-inputs{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 55px   ;
+    gap: 55px;
 }
 .form-data-inputs>input{
-    width: 447px;
+    width: 100%;
     height: 57px;
     background-color: #F6F3F3;
     font-size: 22px;
@@ -913,7 +917,11 @@ main{
 .form-data-btn{
     margin-top: 45px;
 }
-.form-data-btn button{
+.form-data-btn input{
+    display: none;
+}
+.form-data-btn label{
+    display: block;
     box-sizing: border-box;
     width: 165px;
     height: 50px;
@@ -923,8 +931,10 @@ main{
     font-size: 24px;
     font-weight: bold;
     border-radius: 295px;
+    text-align: center;
+    padding: 10px 0px;
 }
-.form-data-btn button:hover{
+.form-data-btn label:hover{
     background-color: #F6EFEF;
     color: #474143;
     cursor: pointer;
