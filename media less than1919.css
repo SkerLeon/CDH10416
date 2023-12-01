@@ -1,0 +1,63 @@
+@media (width<=1919px) {
+    .logo img{
+        width: 70%;
+    }
+    .nav ul{
+        gap: 20px;
+    }
+    .normal-a a{
+        font-size: 18px;
+    }
+    .normal-a1{
+        width: 110px;
+        height: 18px;
+    }
+    .normal-a2{
+        width: 80px;
+        height: 18px;
+    }
+    .select-serve span{
+        font-size: 18px;
+    }
+    .banner-round{
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: #F7F1F1;
+    }
+    .dog-video-items{
+        gap: 60px;
+    }
+    .select-serve{
+        width: 100px;
+        height: 18px;
+    }
+    .select-serve img{
+        height: 18px;
+        width: 15px;
+    }
+    .select-item{
+        width: 100px;
+        height: 75px;
+        top: 25px;
+        border-radius: 10px;
+    }
+    .select-item a{
+        font-size: 16px;
+    }
+    .donate{
+        height: 50px;
+    }
+    .donate a{
+        font-size: 18px;
+    }
+    .donate a:hover{
+        font-size: 22px;
+    }
+    .donate-bg{
+        height: 50px;
+    }
+    .footer-logo img{
+        width: 80%;
+    }
+}

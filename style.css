@@ -7,9 +7,9 @@ body{
 }
 header{
     width: 100%;
+    height: 30%;
     position: relative;
-    height: 331px;
-    margin-bottom: 18%;
+    margin-bottom: -3%;
     z-index: 0;
 }
 main{
@@ -55,6 +55,7 @@ main{
     height: 28px;
     text-align: center;
 }
+
 .normal-a2{
     width: 103px;
     height: 28px;
@@ -72,6 +73,7 @@ main{
     width: 123px;
     justify-content: center; 
 }
+
 .select-serve span{
     font-size: 24px;
     font-weight: bold;
@@ -508,7 +510,7 @@ main{
 
 
 .filter-item{
-    width: 65%;
+    width: 1023px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -516,7 +518,7 @@ main{
     gap: 30px;
 }
 .filter-item-dog{
-    width: 339px;
+    width: 320px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -593,11 +595,11 @@ main{
     width: 87%;
     display: flex;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 80px;
     justify-content: center;
 }
 .video-item{
-    width: 450px;
+    width: 46%;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -613,6 +615,7 @@ main{
     align-items: center;
     gap: 30px;
 }
+
 .video-item-content h2{
     font-size: 24px;
     font-weight: bold;
@@ -624,8 +627,6 @@ main{
     font-weight: bold;
     color: #474143;
 }
-
-
 
 /* singledogparty css */
 .dog-activity{
@@ -738,6 +739,7 @@ main{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 50px;
 }
 .dogdonate-conter{
@@ -746,18 +748,19 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10%;
 }
 .dogdonate-conter-img1{
     margin-top: 80px;
     width: 85%;
     aspect-ratio: 549/490;
-    margin-bottom: 67px;
+    margin-bottom: 50px;
 }
 .dogdonate-conter-img1 img{
     width: 100%;
 }
 .dogdonate-conter-text{
-    width: 85%;
+    width: 87%;
     font-size: 28px;
     line-height: 220%;
     letter-spacing: 3px;
@@ -766,7 +769,7 @@ main{
 .dogdonate-conter-img2{
     position: relative;
     right: -30%;
-    bottom: 3%;
+    bottom: 0px;
 }
 .dogdonate-conter-img2 img{
     width: 100%;
@@ -778,11 +781,10 @@ main{
 }
 .dogdonate-conter-bg img{
     width: 100%;
-    height: 100%;
 }
 .dogdonate-form{
     width: 645px;
-    height: 1365px;
+    height: 1330px;
     background-color: #474143;
     border-radius: 70px;
     display: flex;
@@ -935,7 +937,7 @@ main{
     gap: 3px;
 }
 .form-data-btn{
-    margin-top: 60px;
+    margin-top: 45px;
 }
 .form-data-btn input{
     display: none;
