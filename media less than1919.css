@@ -60,4 +60,26 @@
     .footer-logo img{
         width: 80%;
     }
+    .dogadoption-date{
+        margin: 50px auto;
+    }
+    .dogadoption-date-conter{
+        height: 750px;
+    }
+    .dogadoption-date-conter p{
+        font-size: 20px;
+    }
+    .date-a-span1{
+        width: 13px;
+        height: 13px;
+    }
+    .date-a-span2{
+        font-size: 14px;
+    }
+    .dogadoption-date-a{
+        margin-bottom: 30px;
+    }
+    .dogadoption-date-bg img{
+        transform: scale(1.1);
+    }
 }

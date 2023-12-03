@@ -1075,29 +1075,34 @@ main{
 
 /* dogadoption css */
 .dogadoption-date{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 59%;
-    margin: auto;
+    margin: 100px auto;
     position: relative;
 }
-.dogadoption-date h1{
+.dogadoption-date-conter h1{
     font-size: 32px;
     color: #474143;
     letter-spacing: 7px;
     font-weight: bold;
-    margin-bottom: 150px;
+    margin-bottom: 40px;
 }
-.dogadoption-date-text{
-    margin-bottom: 36px;
+.dogadoption-date-conter{
+    margin: auto;
+    width: 91%;
+    height: 1034px;
+    background-color: #FFC636;
+    border-radius: 61px;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.dogadoption-date-text p{
-    width: 79%;
+.dogadoption-date-conter p{
+    width: 91%;
     font-size: 28px;
     line-height: 210%;
     letter-spacing: 3px;
-    margin: auto;
+    margin-bottom: 25px;
 }
 .dogadoption-date-a{
     display: flex;
@@ -1123,13 +1128,17 @@ main{
     font-weight: bold;
     color: #474143;
 }
+.dogadoption-date-bg{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    
+}
 .dogadoption-date-bg img{
     width: 100%;
-}
-.dogadoption-date-bg{
-    position: absolute;
-    z-index: -1;
-    top:100px;
 }
 
 
