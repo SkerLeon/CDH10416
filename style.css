@@ -1146,29 +1146,33 @@ main{
 .dogadopter{
     width: 71%;
     margin: auto;
+    position: relative;
 }
-.dogadopter>h1{
+.dogadopter-conter>h1{
     font-size: 32px;
     color: #474143;
     letter-spacing: 7px;
     font-weight: bold;
-    margin-bottom: 150px;
+    margin-bottom: 30px;
     text-align: center;
 }
 .dogadopter-conter{
-    width: 59%;
-    margin: auto;
+    width: 793px;
+    margin: 70px auto 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
-    position: relative;
+    background-color: #FFC636;
+    border-radius: 61px;
+    padding: 60px 0px;
+    box-sizing: border-box;
 }
 .dogadopter-conter-inputs{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
 }
 .dogadopter-conter-inputs input{
     width: 500px;
@@ -1203,13 +1207,14 @@ main{
     font-size: 24px;
     font-weight: bold;
     color: #474143;
-    margin-bottom: 150px;
 }
 .dogadopter-bg{
     position: absolute;
-    top: -100px;
     z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .dogadopter-bg img{
-    width: 100%;
+    transform: scaleX(1.2);
 }

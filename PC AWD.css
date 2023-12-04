@@ -89,6 +89,9 @@
         transform: scaleX(1);
         transform: scaleY(0.85);
     }
+    .dogadoption-date-conter p{
+        margin-bottom: 50px;
+    }
 }   
 @media (width<=1601px) {
     .dogadoption-date-bg img{
