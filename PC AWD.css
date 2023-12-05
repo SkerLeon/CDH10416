@@ -93,6 +93,9 @@
     .dogadoption-date-conter p{
         margin-bottom: 50px;
     }
+    .dogadopter-bg img{
+        transform: scaleX(1.1);
+    }
 }   
 
 @media (width<=1601px) {
@@ -103,6 +106,9 @@
     .dogadoption-date-conter p{
         margin-bottom: 25px;
     }
+    .dogadopter-bg img{
+        transform: scaleX(1.1);
+    }
 }
 
 @media (width<=1423px) {
@@ -112,6 +118,9 @@
     }
     .dogadoption-date-conter p{
         margin-bottom: 25px;
+    }
+    .dogadopter-bg img{
+        transform: scaleX(0.95);
     }
 }  
 

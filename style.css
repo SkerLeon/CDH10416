@@ -1158,7 +1158,8 @@ main{
     text-align: center;
 }
 .dogadopter-conter{
-    width: 793px;
+    width: 58%;
+    min-width: 578px;
     margin: 70px auto 100px;
     display: flex;
     flex-direction: column;
