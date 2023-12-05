@@ -55,3 +55,37 @@ for (let i = 0; i < radioButtons.length; i++) {
     radioButtons[i].addEventListener("click", yesOrNoOnClick);
 };
 
+//控制手機mb nav onclick 狀態
+let mbhb = document.getElementById("mbhb");
+function controlMBnav (){ 
+    let mbnavlinkalign = document.getElementById("mbnavlink-align");
+
+    if(mbnavlinkalign.style.right === "-159px"){
+        mbnavlinkalign.style.right = "0px";
+    } else{
+        mbnavlinkalign.style.right = "-159px";
+    }
+    
+}
+//控制漢堡樣式
+let mbspan = document.querySelector("mb-span-style");
+let span1 = document.getElementById("span1");
+let span2 = document.getElementById("span2");
+let span3 = document.getElementById("span3");
+
+function controlhb(){
+    if(span2.style.display === "block"){
+        span1.style.transform = "rotate(45deg)";
+        span2.style.display = "none"
+        span3.style.transform = "rotate(45deg)";
+        mbhb.style.margin = "-5px";
+    } else{
+        span1.style.transform = "rotate(0deg)";
+        span3.style.transform = "rotate(0deg)";
+        mbhb.style.margin = "10px";
+        span2.style.display = "block"
+    }
+}
+
+mbhb.addEventListener("click",controlMBnav);
+mbhb.addEventListener("click",controlhb);

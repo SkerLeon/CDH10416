@@ -1,0 +1,99 @@
+@media (max-width:768px){
+    /* header mbcss */
+    body{
+        background-color: rosybrown;
+        font-family: "Microsoft JhengHei";
+    }
+    .link{
+        display: none;
+    }
+    .mbnav{
+        position: fixed;
+        min-width:393px;
+        width: 100%;
+    }
+    .mblink{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: #474143;
+    }
+    .mblink-bg{
+        background-color: #1F1E1E;
+        width: 100%;
+        height: 6px;
+    }
+    .mbalign{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .mblogo{
+        width: 63px;
+        height: 51px;
+    }
+    .mblogo img{
+        width: 100%;
+        padding-left: 10px;
+    }
+    .mb-span-style{
+        display: block;
+        width: 42px;
+        height: 5px;
+        background-color: #FFF8E5;
+        margin: 10px;
+    }
+    #mbhb-span1{
+        transform: rotate(0deg);
+        transition: 0.3s;
+    }
+    #mbhb-span3{
+        transform: rotate(0deg);
+        transition: 0.3s;
+    }
+    
+    .mbdonate a{
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        color: #474143;
+        width: 98px;
+        height: 64px;
+        background-color: #FFC636;
+        border-radius:52px 0 0 52px ;
+        text-align: center;
+        padding: 21px 0px;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+    .mbnavlink-align{
+        position: absolute;
+        top: 64px;
+        right: -159px;
+        transition: 0.3s;
+    }
+    .mbnavlink{
+        background-color: #474143;
+        width: 159px;
+        height: 138px;
+        padding: 17px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .mbnavlink a{
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color:#FFF8E5;
+        padding-left: 20px;
+    }
+    .mbnavlink-bg{
+        background-color: #1F1E1E;
+        width: 159px;
+        height: 6px;
+    }
+    
+    
+}
