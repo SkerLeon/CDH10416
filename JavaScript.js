@@ -69,21 +69,23 @@ function controlMBnav (){
 }
 //控制漢堡樣式
 let mbspan = document.querySelector("mb-span-style");
-let span1 = document.getElementById("span1");
-let span2 = document.getElementById("span2");
-let span3 = document.getElementById("span3");
+let span1 = document.getElementById("mbhb-span1");
+let span2 = document.getElementById("mbhb-span2");
+let span3 = document.getElementById("mbhb-span3");
 
 function controlhb(){
-    if(span2.style.display === "block"){
-        span1.style.transform = "rotate(45deg)";
-        span2.style.display = "none"
-        span3.style.transform = "rotate(45deg)";
-        mbhb.style.margin = "-5px";
+    if(span2.style.transform == "scale(1)"){
+        span1.style.transform = "rotate(45deg)"
+        span1.style.top = "15px"
+        span2.style.transform = "scale(0)"
+        span3.style.transform = "rotate(-45deg)"
+        span3.style.bottom = "15px"  
     } else{
-        span1.style.transform = "rotate(0deg)";
-        span3.style.transform = "rotate(0deg)";
-        mbhb.style.margin = "10px";
-        span2.style.display = "block"
+        span1.style.transform = "rotate(0deg)"
+        span1.style.top = "0px"
+        span2.style.transform = "scale(1)"
+        span3.style.transform = "rotate(0deg)"
+        span3.style.bottom = "0px" 
     }
 }
 

@@ -1,4 +1,8 @@
 @media (max-width:768px){
+    /* 共通屬性 */
+    .mbdpno{
+        display: none;
+    }
     /* header mbcss */
     body{
         background-color: rosybrown;
@@ -11,6 +15,7 @@
         position: fixed;
         min-width:393px;
         width: 100%;
+        display: block;
     }
     .mblink{
         display: flex;
@@ -27,7 +32,7 @@
     .mbalign{
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 3px;
     }
     .mblogo{
         width: 63px;
@@ -42,13 +47,21 @@
         width: 42px;
         height: 5px;
         background-color: #FFF8E5;
+        border-radius: 5px;
         margin: 10px;
     }
     #mbhb-span1{
         transform: rotate(0deg);
         transition: 0.3s;
+        position: relative;
+        top: 0px;
+    }
+    #mbhb-span2{
+        transition: 0.3s;
     }
     #mbhb-span3{
+        position: relative;
+        bottom: 0px;
         transform: rotate(0deg);
         transition: 0.3s;
     }
@@ -93,6 +106,16 @@
         width: 159px;
         height: 6px;
     }
-    
-    
+    .banner{
+        position: relative;
+        bottom: -70px;
+        z-index: -1;
+    }
+    .mbbanner-bg{
+        display: block;
+        width: 100%;
+    }
+    .mbbanner-bg img{
+        width: 100%;
+    }
 }

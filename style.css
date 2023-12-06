@@ -1,3 +1,7 @@
+/* 共通屬性 */
+.dpno{
+    display: none;
+}
 /* 共用harder footer */
 body{
     font-family: "Microsoft JhengHei";
