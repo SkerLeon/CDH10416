@@ -5,40 +5,37 @@
     }
     /* header mbcss */
     body{
-        background-color: rosybrown;
+        background-color: #FFF8E5;
         font-family: "Microsoft JhengHei";
     }
-    .link{
-        display: none;
-    }
-    .mbnav{
+    .mb-nav{
         position: fixed;
         min-width:393px;
         width: 100%;
         display: block;
     }
-    .mblink{
+    .mb-link{
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
         background-color: #474143;
     }
-    .mblink-bg{
+    .mb-link-bg{
         background-color: #1F1E1E;
         width: 100%;
         height: 6px;
     }
-    .mbalign{
+    .mb-align{
         display: flex;
         align-items: center;
         gap: 3px;
     }
-    .mblogo{
+    .mb-logo{
         width: 63px;
         height: 51px;
     }
-    .mblogo img{
+    .mb-logo img{
         width: 100%;
         padding-left: 10px;
     }
@@ -66,7 +63,7 @@
         transition: 0.3s;
     }
     
-    .mbdonate a{
+    .mb-donate a{
         display: block;
         font-size: 18px;
         font-weight: bold;
@@ -80,42 +77,159 @@
         box-sizing: border-box;
         text-decoration: none;
     }
-    .mbnavlink-align{
+    .mb-navlink-align{
         position: absolute;
         top: 64px;
         transition: 0.3s;
     }
-    .mbnavlink{
+    .mb-navlink{
         background-color: #474143;
         width: 159px;
-        height: 138px;
+        height: 150px;
         padding: 17px 0px;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
     }
-    .mbnavlink a{
+    .mb-navlink a{
         text-decoration: none;
         font-size: 18px;
         font-weight: bold;
         color:#FFF8E5;
         padding-left: 20px;
     }
-    .mbnavlink-bg{
+    .mb-navlink-bg{
         background-color: #1F1E1E;
         width: 159px;
         height: 6px;
     }
     .banner{
-        position: relative;
         bottom: -70px;
-        z-index: -1;
     }
-    .mbbanner-bg{
+    .mb-banner-bg{
         display: block;
         width: 100%;
+        z-index: -1;
     }
-    .mbbanner-bg img{
+    .mb-banner-bg img{
         width: 100%;
+    }
+    .mb-banner-arc{
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom:0%;
+        vertical-align: bottom;
+        z-index: -1;
+    }
+    .mb-banner-arc-pic img{
+        width: 100%;
+    }
+    .banner-link{
+        bottom: 10%;
+        left: 43%;
+        
+    }
+    .banner-round{
+        width: 8px;
+        height: 8px;
+    }
+
+    /* footer mb CSS */
+    .mb-footer-bg{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 133px;
+        background-color: #474143;
+    }
+    .mb-footer-content{
+        width: 76%;
+        margin: auto;
+    }
+    .footer-content-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .mb-footer-logo{
+        width: 81px;
+        height: 65px;
+    }
+    .mb-footer-logo img{
+        width: 100%;
+    }
+    .mb-footer-text{
+        font-size: 8px;
+        line-height: 25px;
+        letter-spacing: 10%;
+        color: #FFF8E5;
+    }
+    .mb-declaration{
+        font-size: 8px;
+        font-weight: bold;
+        color: #FFF8E5;
+        margin-top: 15px;
+    }
+    .mb-footer-cover{
+        width: 100%;
+        height: 10px;
+        background-color: #121112;
+    }
+
+    /* index mb CSS */
+    .index-bg{
+        width: 90%;
+        margin-top: 100px;
+    }
+    .index-universal{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .index-pic{
+        width: 52%;
+        height: 246px;
+    }
+    .index-content{
+        width: 100%;
+        height: 266px;
+        gap: 10px;
+    }
+    .about-pic-A img{
+        width: 126px;
+        height: 198px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .about-pic-B img{
+        width: 126px;
+        height: 198px;
+        bottom:0px;
+        right: 0px;
+    }
+    .index-content h1{
+        font-size: 18px;
+    }
+    .index-content p{
+        font-size: 16px;
+    }
+    .party-pic-A img{
+        width: 126px;
+        height: 198px;
+    }
+    .party-pic-B img{
+        width: 126px;
+        height: 198px;
+    }
+    .about-content-a{
+        width: 72px;
+        height: 29px;
+        border-radius: 10px;
+    }
+    .about-content-a a{
+        font-size: 14px;
     }
 }

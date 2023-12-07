@@ -198,10 +198,7 @@ main{
 
 
 
-
-.footer{
-    position: relative;
-}
+/* footer CSS */
 .footer-wave img{
     width: 100%;
     vertical-align: middle;
@@ -271,13 +268,11 @@ main{
     height: 480px;
     display: flex;
     position: relative;
-    
 }
 .about-pic-B img{
     position: absolute;
     right: 2px;
     bottom: 0px;
-    
 }
 .index-content{
     width: 442px;
