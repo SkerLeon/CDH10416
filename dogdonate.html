@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <div class="link">
+        <div class="link mbdpno">
             <div class="logo">
                 <a href="index.html"><img src="pic/LOGO.svg" alt="LOGO"></a>
             </div>
@@ -20,6 +20,7 @@
                     <li class="normal-a">                        
                         <a href="dogshow.html" class="normal-a1">DOG SHOW</a>                                     
                     </li>
+
                     <li> 
                         <div class="select">
                             <div class="select-serve" id="select-serve">
@@ -32,29 +33,79 @@
                             </div>                   
                         </div>
                     </li>
+
                     <li class="normal-a">                                                
                         <a href="dogabout.html" class="normal-a2">關於我們</a>                                            
                     </li>
+
                     <li>                        
-                        <div class="donate"><a href="dogdonate.html">立即捐款</a> </div>                       
+                        <div class="donate">
+                            <a href="dogdonate.html">立即捐款</a>
+                        </div>                       
                         <div class="donate-bg"></div>                       
                     </li>
                 </ul>
-            </nav>
+            </nav>  
+        </div>
+
+        <div class="mb-nav dpno">
+            <div class="mb-link">
+                <div class="mb-logo">
+                    <img src="pic/LOGO.svg" alt="logo圖片">
+                </div>
+
+                <div class="mb-align">
+                    <div class="mb-hb" id="mbhb">
+                        <span class="mb-span-style" id="mbhb-span1"></span>
+                        <span class="mb-span-style" id="mbhb-span2" style="transform: scale(1);"></span>
+                        <span class="mb-span-style" id="mbhb-span3"></span>
+                    </div>
+    
+                    <div class="mb-donate">
+                        <a href="dogdonate.html">立即捐款</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-link-bg"></div>
+
+            <div class="mb-navlink-align" id="mbnavlink-align" style="right: -159px;">
+                <nav class="mb-navlink">
+                    <a href="dogshow.html">DOG SHOW</a>
+                    <a href="singledogparty.html">單身狗派對</a>
+                    <a href="dogtalk.html">狗生常談</a>
+                    <a href="dogabout.html">關於我們</a>
+                </nav>
+                <div class="mb-navlink-bg"></div>
+            </div>
         </div>
 
         <div class="banner">
-            <div class="banner-bg"><img src="pic/banner.svg" alt="banner樣板"></div>
+            <div class="banner-bg mbdpno"><img src="pic/banner.png" alt="banner樣板"></div>
+
+            <div class="mb-banner-bg dpno">
+                <img src="pic/mbbanner-bg.png" alt="手機版banner圖片">
+            </div>
+
             <div class="banner-link">
                 <div class="banner-round"></div>
                 <div class="banner-round"></div>
                 <div class="banner-round"></div>
                 <div class="banner-round"></div>
             </div>
-            <div class="banner-wave-wrap">
-                <div class="banner-wave"><img src="pic/banner-wave.svg" alt="banner波浪型樣板"></div>
+            
+            <div class="banner-wave-wrap mbdpno">
+                <div class="banner-wave">
+                    <img src="pic/banner-wave.svg" alt="banner波浪型樣板">
+                </div>
+
                 <div class="banner-wave-cover">
-                    <img src="pic/banner-wave-cover.svg" alt="">
+                    <img src="pic/banner-wave-cover.svg" alt="banner遮蓋圖片">
+                </div>
+            </div>
+
+            <div class="mb-banner-arc dpno">
+                <div class="mb-banner-arc-pic">
+                    <img src="pic/mb-banner-arc-pic.svg" alt="banner弧線">
                 </div>
             </div>
         </div>
@@ -162,19 +213,21 @@
     
     <footer>
         <div class="footer">
-            <div class="footer-wave">
+            <div class="footer-wave mbdpno">
                 <img src="pic/footer-wave.svg" alt="footer波浪樣板">
             </div>
-            <div class="footer-bg">
+
+            <div class="footer-bg mbdpno">
                 <div class="footer-content">
                     <div class="service">
-                        <h3>SERVICE</h3>
+                        <h3 class="mbdpno">SERVICE</h3>
                         <p>
                             電話:(05) 1234-5678<br>
                             email:ilovedog@gmail.com<br>
                             地址:台北市犬區養生街64號<br>
                         </p>
                     </div>
+
                     <div class="logo-declaration">
                         <div class="footer-logo">
                             <img src="pic/LOGO.svg" alt="footerlogo">
@@ -183,6 +236,7 @@
                             <h2>本網站為緯育Tibame前端工程師專業技術養成班學員之作品,僅供學習丶展示之用途</h2>
                         </div>
                     </div>
+
                     <div class="conact">
                         <h3>CONACT</h3>
                         <p>
@@ -190,13 +244,33 @@
                             免責聲明<br>
                             隱私權保護<br>
                         </p>
-                    </div>
-                    
+                    </div>   
                 </div>
-                
+            </div>
+
+            <div class="mb-footer-bg dpno" >
+                <div class="mb-footer-content">
+                    <div class="footer-content-row">
+                        <div class="mb-footer-logo">
+                            <img src="pic/LOGO.svg" alt="footerlogo">
+                        </div>
+    
+                        <p class="mb-footer-text">
+                            電話:(05) 1234-5678<br>
+                            email:ilovedog@gmail.com<br>
+                            地址:台北市犬區養生街64號<br>
+                        </p>
+                    </div>
+
+                    <div class="mb-declaration">
+                        <h2>本網站為緯育Tibame前端工程師專業技術養成班學員之作品,僅供學習丶展示之用途</h2>
+                    </div>
+
+                </div>
+
+                <div class="mb-footer-cover"></div>
             </div>
         </div>
-
     </footer>
     <script src="JavaScript.js"></script>
 </body>

@@ -13,7 +13,7 @@
         min-width:393px;
         width: 100%;
         display: block;
-        z-index: 2;
+        z-index: 1;
     }
     .mb-link{
         display: flex;
@@ -120,7 +120,6 @@
         width: 100%;
         position: absolute;
         bottom:0%;
-        vertical-align: bottom;
         z-index: -1;
     }
     .mb-banner-arc-pic img{
