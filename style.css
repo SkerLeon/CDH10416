@@ -336,11 +336,11 @@ main{
     font-weight: bold;
     text-decoration: none;
 }
-.party-pic-B{
+.party-pic-B img{
     position: absolute;
     left: 112px;
 }
-.party-pic-A{
+.party-pic-A img{
     position: absolute;
     top: 90px;
 }
