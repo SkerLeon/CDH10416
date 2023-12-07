@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="PC AWD.css">
+    <link rel="stylesheet" href="mbstyle.css">
 </head>
 <body>
     <header>
@@ -115,11 +116,11 @@
         <div class="filter">
             <h1>DOG SHOW</h1>
             <div class="filter-content">                               
-                <nav class="filter-nav">
+                <div class="filter-nav">
                     <ul class="filter-nav-list">
                         <li class="nav-list-item">
                             <h5>性別</h5>
-                            <div class="filter-radio-gender radio-align">
+                            <div class="filter-radio-gender radio-align radio-align-gender">
                                 <input type="radio" id="gender-male" name="filter-radio-gender" class="filter-radio">
                                 <label for="gender-male" class="gender-radio radio-hover">
                                     <span class="radio-style">公</span>
@@ -135,22 +136,26 @@
 
                         <li class="nav-list-item">
                             <h5>年齡</h5>
-                            <div class="filter-radio-age radio-align">
+                            <div class="filter-radio-age radio-align ">
                                 
-                                <input type="radio"  id="age-puppies" name="filter-radio-age" class="filter-radio">
-                                <label for="age-puppies" class="age-radio radio-hover"><span class="radio-style">幼犬 0~1歲</span></label>
-
+                                <div class="mb-radio-align">
+                                    <input type="radio"  id="age-puppies" name="filter-radio-age" class="filter-radio">
+                                    <label for="age-puppies" class="age-radio radio-hover"><span class="radio-style">幼犬 0~1歲</span></label>
+    
+                                    
+                                    <input type="radio" id="age-teenagers" name="filter-radio-age" class="filter-radio">
+                                    <label for="age-teenagers" class="age-radio radio-hover"><span class="radio-style">青少犬 1~3歲</span></label>
+                                </div>
                                 
-                                <input type="radio" id="age-teenagers" name="filter-radio-age" class="filter-radio">
-                                <label for="age-teenagers" class="age-radio radio-hover"><span class="radio-style">青少犬 1~3歲</span></label>
                                 
-                                
-                                <input type="radio" id="age-adult" name="filter-radio-age" class="filter-radio">
-                                <label for="age-adult" class="age-radio radio-hover"><span class="radio-style">成犬 3~8歲</span></label>
-
-                                
-                                <input type="radio" id="age-old" name="filter-radio-age" class="filter-radio">
-                                <label for="age-old" class="age-radio radio-hover"><span class="radio-style">老犬 8+歲</span></label>    
+                                <div class="mb-radio-align">
+                                    <input type="radio" id="age-adult" name="filter-radio-age" class="filter-radio">
+                                    <label for="age-adult" class="age-radio radio-hover"><span class="radio-style">成犬 3~8歲</span></label>
+    
+                                    
+                                    <input type="radio" id="age-old" name="filter-radio-age" class="filter-radio">
+                                    <label for="age-old" class="age-radio radio-hover"><span class="radio-style">老犬 8+歲</span></label> 
+                                </div>   
                             </div>
                         </li>
 
@@ -158,26 +163,33 @@
                             <h5>體重</h5>
                             <div class="filter-radio-weight radio-align">
                                 
-                                <input type="radio" id="weight-small" name="filter-radio-weight" class="filter-radio">
-                                <label for="weight-small" class="weight-radio radio-hover"><span class="radio-style">小型犬 1~12公斤</span></label>
+                                <div class="mb-radio-align">
+                                    <input type="radio" id="weight-small" name="filter-radio-weight" class="filter-radio">
+                                    <label for="weight-small" class="weight-radio radio-hover"><span class="radio-style">小型犬 1~12公斤</span></label>
+    
+                                    
+                                    <input type="radio" id="weight-middle" name="filter-radio-weight" class="filter-radio">
+                                    <label for="weight-middle" class="weight-radio radio-hover"><span class="radio-style">中型犬 12~15公斤</span></label>
+                                </div>
 
                                 
-                                <input type="radio" id="weight-middle" name="filter-radio-weight" class="filter-radio">
-                                <label for="weight-middle" class="weight-radio radio-hover"><span class="radio-style">中型犬 12~15公斤</span></label>
-
-                                
-                                <input type="radio" id="weight-big" name="filter-radio-weight" class="filter-radio">
-                                <label for="weight-big" class="weight-radio radio-hover"><span class="radio-style">大型犬 12~15公斤</span></label>
+                                <div class="mb-radio-align">
+                                    <input type="radio" id="weight-big" name="filter-radio-weight" class="filter-radio">
+                                    <label for="weight-big" class="weight-radio radio-hover"><span class="radio-style">大型犬 12~15公斤</span></label>
+                                </div>
     
                             </div>
                         </li>
+
                     </ul>
-                </nav>
+                </div>
+
                 <div class="filter-search">
                     <input type="search" placeholder="使用名字搜尋" class="search-style" id="filter-search" name="filter-search">
                     <label for="filter-search"><img src="pic/dogshow-search.svg" alt="搜尋icon"></label>
                 </div>
-                <div class="filter-img">
+
+                <div class="filter-img mbdpno">
                     <img src="pic/dogshow-exhibit.svg" alt="狗狗照片">
                 </div>
             </div>

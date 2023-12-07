@@ -167,10 +167,11 @@
         color: #FFF8E5;
     }
     .mb-declaration{
-        font-size: 8px;
+        font-size: 7px;
         font-weight: bold;
         color: #FFF8E5;
         margin-top: 15px;
+        text-align: center;
     }
     .mb-footer-cover{
         width: 100%;
@@ -252,5 +253,86 @@
     .user-text p{
         font-size: 16px;
 
+    }
+
+    /* dogshow mb CSS */
+    .filter{
+        width: 90%;
+        margin-top: 100px;
+    }
+    .filter h1{
+        font-size: 20px;
+        margin-top: 30px;
+    }
+    .filter-content{
+        width: 90%;
+    }
+    .nav-list-item h5{
+        font-size: 18px;
+    }
+    .radio-align{
+        display: flex;
+        flex-direction: column;
+    }
+    .radio-align-gender{
+        flex-direction: row;
+    }
+    .gender-radio{
+        width: 40px;
+        height: 28px;
+    }
+    .age-radio{
+        width: 120px;
+        height: 28px;
+    }
+    .weight-radio{
+        width: 155px;
+        height: 28px;
+    }
+    .radio-style{
+        font-size: 16px;
+    }
+    .search-style{
+        width: 158px;
+        height: 34px;
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    .filter-search{
+        right: 0px;
+    }
+    .filter-search img{
+        width: 14px;
+        height: 23px;
+        top: 5px;
+    }
+    .filter-item{
+        width: 90%;
+        row-gap: 5px;
+    }
+    .filter-item-dog{
+        width: 43%;
+    }
+    .item-dog-img{
+        margin-bottom: 10px;
+    }
+    .item-dog-nickname{
+        width: 105px;
+        height: 29px;
+        top: 40%;
+    }
+    .item-dog-nickname span{
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+    .item-dog-introduce{
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    .filter-item-btn{
+        width: 96px;
+        height: 33px;
+        font-size: 16px;
     }
 }

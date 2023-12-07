@@ -433,6 +433,14 @@ main{
     position: absolute;
     right: 24%;
 }
+.mb-radio-age-align{
+    display: flex;
+    gap: 10px;
+}
+.mb-radio-align{
+    display: flex;
+    gap: 10px;
+}
 .filter-search img{
     width: 26px;
     height: 42px;
@@ -450,7 +458,7 @@ main{
     color: #938B8B;
     outline: none;
     border-radius: 190px;
-    padding: 0px 20px;
+    padding-left:20px;
 }
 .search-style:focus{
     color: #474143;
@@ -515,7 +523,8 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    row-gap: 30px;
+    column-gap: 30px;
 }
 .filter-item-dog{
     width: 320px;
@@ -529,6 +538,7 @@ main{
     margin-bottom: 16px;
 }
 .item-dog-img img{
+    width: 100%;
     vertical-align: middle;
 }
 .item-dog-nickname{
