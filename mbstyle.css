@@ -86,15 +86,15 @@
     .mb-navlink{
         background-color: #474143;
         width: 159px;
-        height: 150px;
+        height: 185px;
         padding: 17px 0px;
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 32px;
     }
     .mb-navlink a{
         text-decoration: none;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: bold;
         color:#FFF8E5;
         padding-left: 20px;
@@ -221,16 +221,16 @@
         font-size: 16px;
     }
     .about-content-a{
-        width: 80px;
-        height: 30px;
+        width: 90px;
+        height: 32px;
         border-radius: 10px;
     }
     .about-content-a a{
         font-size: 14px;
     }
     .party-content-b{
-        width: 120px;
-        height: 30px;
+        width: 130px;
+        height: 32px;
         border-radius: 10px;
     }
     .party-content-b a{
@@ -467,6 +467,10 @@
         transform: scale(0.8);
         top: 16%;
     }
+    .donationamount-radio-style:checked +.donationamount-radio-hover:nth-child(even){
+        color: #474143; 
+        font-size: 22px;
+    }
     .donationamount-customize{
         height: 47px;
         font-size: 16px;
@@ -515,6 +519,14 @@
         height: 43px;
         font-size: 20px;
         padding: 9px 0px;
+    }
+    .radio-style-checked-yes{
+        width: 10px;
+        height: 10px;
+    }
+    .radio-style-checked-no{
+        width: 10px;
+        height: 10px;
     }
 
     /* dogdatails mb CSS */
