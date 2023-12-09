@@ -269,10 +269,57 @@ main{
     display: flex;
     position: relative;
 }
-.about-pic-B img{
+.index-pic-item-A{
+    width: 246px;
+    height: 386px;
     position: absolute;
-    right: 2px;
+    left: 25px;
+}
+.index-pic-item-B{
+    width: 246px;
+    height: 386px;
+    position: absolute;
+    right: -25px;
     bottom: 0px;
+}
+.pic-item-indeximg{
+    width: 192px;
+    height: 333px;
+    overflow: hidden;
+    border-radius: 295px;
+    position: relative;
+}
+.pic-item-indeximg img{
+    width: 100%;
+}
+.item-indeximg-A img{
+    position: absolute;
+    top: 0px;
+    transform: scale(1.5);
+}
+.item-indeximg-B img{
+    position: absolute;
+    top: -20px;
+    transform: scale(1.5);
+}
+.item-indeximg-C img{
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+    transform: scale(1.5);
+}
+.item-indeximg-D img{
+    position: absolute;
+    top: 0px;
+    transform: scale(1.4);
+}
+.pic-item-dotted{
+    position: absolute;
+    top: -25px;
+    left: -30px;
+}
+.pic-item-dotted img{
+    width: 100%;
 }
 .index-content{
     width: 442px;
@@ -336,21 +383,13 @@ main{
     font-weight: bold;
     text-decoration: none;
 }
-.party-pic-B img{
-    position: absolute;
-    left: 112px;
-}
-.party-pic-A img{
-    position: absolute;
-    top: 90px;
-}
 
 .index-bg{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 71%;
-    margin: auto;
+    margin: 30px auto 20px;
     gap: 61px; 
     z-index: 0;
 }

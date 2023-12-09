@@ -201,19 +201,7 @@
         height: 266px;
         gap: 10px;
     }
-    .about-pic-A img{
-        width: 126px;
-        height: 198px;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-    }
-    .about-pic-B img{
-        width: 126px;
-        height: 198px;
-        bottom:0px;
-        right: 0px;
-    }
+    
     .index-content h1{
         font-size: 18px;
     }
