@@ -85,7 +85,7 @@ main{
     transition: 0.2s;
     margin-right: 6px;
 }
-.select-serve-img{
+#select-serve-img{
     transition: 0.2s;
 } 
 

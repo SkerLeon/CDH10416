@@ -1,5 +1,5 @@
  //控制服務項目下的清單顯示
- function selectdisplay(){ 
+function selectdisplay(){ 
     let itemshow = document.getElementById("select-item");
     
 
@@ -21,7 +21,7 @@ hovertrigger.addEventListener("mouseenter",function(){
     hovertrigger.style.borderRadius = "3px";  
     hovertrigger.style.cursor = "pointer";
     hovertext.style.color = "#474143";            
-    hoverimg.style.filter ="invert(80%)";
+    hoverimg.style.filter ="invert(100%)";
 });
 hovertrigger.addEventListener("mouseleave",function(){
     hovertrigger.style.backgroundColor = "#00000000";
