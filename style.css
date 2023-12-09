@@ -269,14 +269,10 @@ main{
     display: flex;
     position: relative;
 }
-.about-pic-A img{
-    image-rendering: optimizeQuality;
-}
 .about-pic-B img{
     position: absolute;
     right: 2px;
     bottom: 0px;
-    image-rendering: optimizeQuality;
 }
 .index-content{
     width: 442px;
@@ -618,7 +614,7 @@ main{
     flex-direction: column;
     align-items: start;
 }
-.video-item video{
+.video-item iframe{
     width: 100%;
     border-radius: 30px;
     margin-bottom: 20px;
