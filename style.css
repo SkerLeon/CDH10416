@@ -269,10 +269,14 @@ main{
     display: flex;
     position: relative;
 }
+.about-pic-A img{
+    image-rendering: optimizeQuality;
+}
 .about-pic-B img{
     position: absolute;
     right: 2px;
     bottom: 0px;
+    image-rendering: optimizeQuality;
 }
 .index-content{
     width: 442px;
