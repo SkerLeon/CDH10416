@@ -196,10 +196,12 @@
     .index-pic-item-A{
         width: 126px;
         height: 198px;
+        left: 0px;
     }
     .index-pic-item-B{
         width: 126px;
         height: 198px;
+        right: -15px;
     }
     .item-indeximg-B img{
         transform: scale(1.6);
@@ -245,21 +247,27 @@
     .index-user{
         flex-direction: column;
         width: 100%;
+        margin-top: 0px;
     }
     .user{
+        width: 100%;
         align-items: center;
+        margin-bottom: 30px;
     }
-    .user-img img{
-        width: 207px;
-        height: 207px;
+    .user-pic{
+        width: 170px;
+        height: 170px;
+    }
+    .user-img-dotted{
+        top: -22px;
     }
     .user-text h2{
         font-size: 18px;
     }
     .user-text p{
         font-size: 16px;
-
     }
+
 
     /* dogshow mb CSS */
     .filter{

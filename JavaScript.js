@@ -67,6 +67,7 @@ function controlMBnav (){
     }
     
 }
+
 //控制漢堡樣式
 let mbspan = document.querySelector("mb-span-style");
 let span1 = document.getElementById("mbhb-span1");
@@ -92,7 +93,7 @@ function controlhb(){
 mbhb.addEventListener("click",controlMBnav);
 mbhb.addEventListener("click",controlhb);
 
-//index 圖片動態效果
+//index 介紹圖片動態效果
 let indexUniversal = document.getElementsByClassName("index-universal");
 
 let picItemDottedA = document.getElementById("pic-item-dotted-A");
@@ -110,14 +111,14 @@ function indexSlideInEffect(e){
         picItemDottedA.style.transform = "scale(1.1)";
         picItemDottedB.style.transform = "scale(1.1)";
         itemIndeximgA.style.transform = "scale(1.4)"
-        itemIndeximgB.style.transform = "scale(1.4)"
+        itemIndeximgB.style.transform = "scale(1.5)"
     } 
 
     if(e.target.id == "index-universal-B"){
         picItemDottedC.style.transform = "scale(1.1)";
         picItemDottedD.style.transform = "scale(1.1)";
         itemIndeximgC.style.transform = "scale(1.4)"
-        itemIndeximgD.style.transform = "scale(1.3)"
+        itemIndeximgD.style.transform = "scale(1.4)"
     } 
 }
 
@@ -126,14 +127,14 @@ function indexSlideOutEffect(e){
         picItemDottedA.style.transform = "scale(1)";
         picItemDottedB.style.transform = "scale(1)";
         itemIndeximgA.style.transform = "scale(1.5)"
-        itemIndeximgB.style.transform = "scale(1.5)"
+        itemIndeximgB.style.transform = "scale(1.6)"
     } 
 
     if(e.target.id == "index-universal-B"){
         picItemDottedC.style.transform = "scale(1)";
         picItemDottedD.style.transform = "scale(1)";
         itemIndeximgC.style.transform = "scale(1.5)"
-        itemIndeximgD.style.transform = "scale(1.4)"
+        itemIndeximgD.style.transform = "scale(1.5)"
     } 
 }
 
@@ -142,5 +143,43 @@ if(window.innerWidth>768){
     for (let i = 0; i < indexUniversal.length; i++) {
         indexUniversal[i].addEventListener("mouseenter", indexSlideInEffect);
         indexUniversal[i].addEventListener("mouseleave", indexSlideOutEffect);
+    };
+}
+
+//index 作者圖片動態效果
+let user =document.getElementsByClassName("user");
+
+let userImgDottedA = document.getElementById("user-img-dotted-A");
+let userImgDottedB = document.getElementById("user-img-dotted-B");
+let userImgDottedC = document.getElementById("user-img-dotted-C");
+
+function indexAuthorPictureSlideIn(e){
+    if(e.target.id == "user-A"){
+        userImgDottedA.style.transform = "rotate(90deg)";
+    }
+    if(e.target.id == "user-B"){
+        userImgDottedB.style.transform = "rotate(90deg)";
+    }
+    if(e.target.id == "user-C"){
+        userImgDottedC.style.transform = "rotate(90deg)";
+    }
+    
+}
+function indexAuthorPictureSlideOut(e){
+    if(e.target.id == "user-A"){
+        userImgDottedA.style.transform = "rotate(0deg)";
+    }
+    if(e.target.id == "user-B"){
+        userImgDottedB.style.transform = "rotate(0deg)";
+    }
+    if(e.target.id == "user-C"){
+        userImgDottedC.style.transform = "rotate(0deg)";
+    }
+}
+
+if(window.innerWidth>768){
+    for (let i = 0; i < user.length; i++) {
+        user[i].addEventListener("mouseenter", indexAuthorPictureSlideIn);
+        user[i].addEventListener("mouseleave", indexAuthorPictureSlideOut);
     };
 }
