@@ -283,8 +283,8 @@ main{
     bottom: 0px;
 }
 .pic-item-indeximg{
-    width: 192px;
-    height: 333px;
+    width: 79%;
+    height: 87%;
     overflow: hidden;
     border-radius: 295px;
     position: relative;
@@ -296,27 +296,34 @@ main{
     position: absolute;
     top: 0px;
     transform: scale(1.5);
+    z-index: 0;
+    transition: 0.3s;
 }
 .item-indeximg-B img{
     position: absolute;
     top: -20px;
     transform: scale(1.5);
+    z-index: 1;
+    transition: 0.3s;
 }
 .item-indeximg-C img{
     position: absolute;
     bottom: 0px;
     left: 30px;
     transform: scale(1.5);
+    transition: 0.3s;
 }
 .item-indeximg-D img{
     position: absolute;
     top: 0px;
     transform: scale(1.4);
+    transition: 0.3s;
 }
 .pic-item-dotted{
     position: absolute;
     top: -25px;
     left: -30px;
+    transition: 0.3s;
 }
 .pic-item-dotted img{
     width: 100%;
@@ -383,18 +390,15 @@ main{
     font-weight: bold;
     text-decoration: none;
 }
-
 .index-bg{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 71%;
-    margin: 30px auto 20px;
+    margin: 50px auto 20px;
     gap: 61px; 
     z-index: 0;
 }
-
-
 .index-user{
     display: flex;
     align-items: start; 

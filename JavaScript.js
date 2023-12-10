@@ -91,3 +91,56 @@ function controlhb(){
 
 mbhb.addEventListener("click",controlMBnav);
 mbhb.addEventListener("click",controlhb);
+
+//index 圖片動態效果
+let indexUniversal = document.getElementsByClassName("index-universal");
+
+let picItemDottedA = document.getElementById("pic-item-dotted-A");
+let picItemDottedB = document.getElementById("pic-item-dotted-B");
+let picItemDottedC = document.getElementById("pic-item-dotted-C");
+let picItemDottedD = document.getElementById("pic-item-dotted-D");
+
+let itemIndeximgA = document.getElementById("item-indeximg-A");
+let itemIndeximgB = document.getElementById("item-indeximg-B");
+let itemIndeximgC = document.getElementById("item-indeximg-C");
+let itemIndeximgD = document.getElementById("item-indeximg-D");
+
+function indexSlideInEffect(e){
+    if(e.target.id == "index-universal-A"){
+        picItemDottedA.style.transform = "scale(1.1)";
+        picItemDottedB.style.transform = "scale(1.1)";
+        itemIndeximgA.style.transform = "scale(1.4)"
+        itemIndeximgB.style.transform = "scale(1.4)"
+    } 
+
+    if(e.target.id == "index-universal-B"){
+        picItemDottedC.style.transform = "scale(1.1)";
+        picItemDottedD.style.transform = "scale(1.1)";
+        itemIndeximgC.style.transform = "scale(1.4)"
+        itemIndeximgD.style.transform = "scale(1.3)"
+    } 
+}
+
+function indexSlideOutEffect(e){
+    if(e.target.id == "index-universal-A"){
+        picItemDottedA.style.transform = "scale(1)";
+        picItemDottedB.style.transform = "scale(1)";
+        itemIndeximgA.style.transform = "scale(1.5)"
+        itemIndeximgB.style.transform = "scale(1.5)"
+    } 
+
+    if(e.target.id == "index-universal-B"){
+        picItemDottedC.style.transform = "scale(1)";
+        picItemDottedD.style.transform = "scale(1)";
+        itemIndeximgC.style.transform = "scale(1.5)"
+        itemIndeximgD.style.transform = "scale(1.4)"
+    } 
+}
+
+//如果尺寸大於768才執行
+if(window.innerWidth>768){
+    for (let i = 0; i < indexUniversal.length; i++) {
+        indexUniversal[i].addEventListener("mouseenter", indexSlideInEffect);
+        indexUniversal[i].addEventListener("mouseleave", indexSlideOutEffect);
+    };
+}

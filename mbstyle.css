@@ -182,7 +182,7 @@
     /* index mb CSS */
     .index-bg{
         width: 90%;
-        margin-top: 100px;
+        margin-top: 120px;
     }
     .index-universal{
         flex-direction: column;
@@ -193,6 +193,25 @@
         width: 52%;
         height: 246px;
     }
+    .index-pic-item-A{
+        width: 126px;
+        height: 198px;
+    }
+    .index-pic-item-B{
+        width: 126px;
+        height: 198px;
+    }
+    .item-indeximg-B img{
+        transform: scale(1.6);
+    }
+    .item-indeximg-C img{
+        transform: scale(1.6);
+        left: 17px;
+    }
+    .pic-item-dotted{
+        top: -39px;
+        transform: scale(0.85);
+    }
     .index-pic-order{
         order: -1;
     }
@@ -201,7 +220,6 @@
         height: 266px;
         gap: 10px;
     }
-    
     .index-content h1{
         font-size: 18px;
     }
