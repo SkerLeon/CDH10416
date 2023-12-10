@@ -154,6 +154,8 @@ main{
 }
 .banner-bg img{
     width: 100%;
+    transition:0.4s ease-in-out;
+    opacity: 1;
 }
 .banner-link{
     display: flex;
@@ -430,7 +432,7 @@ main{
 .user-img-dotted{
     position: absolute;
     top: -33px;
-    transition: 0.3s;
+    transition: 0.7s;
 }
 .user-img-dotted img{
     width: 100%;

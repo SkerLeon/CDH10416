@@ -183,3 +183,38 @@ if(window.innerWidth>768){
         user[i].addEventListener("mouseleave", indexAuthorPictureSlideOut);
     };
 }
+
+//banner 輪播及切換效果
+let banner = document.getElementById("banner");
+let bannerRounds = document.getElementsByClassName("banner-round");
+let currentImageIndex = 0;
+
+function switchToNextPicture() {
+    // 將 banner 的不透明度設為 0，實現淡出效果
+    banner.style.opacity = 0;
+
+    // 等待一小段時間，然後切換到下一張圖片
+    setTimeout(function() {
+        currentImageIndex = (currentImageIndex + 1) % bannerRounds.length;
+        banner.src = "pic/banner" + (currentImageIndex + 1) + ".jpg";
+
+        // 將 banner 的不透明度設為 1，實現淡入效果
+        banner.style.opacity = 1;
+    }, 500); // 此處的 500 毫秒應與過渡效果的時間一致
+}
+
+// 使用定時器每隔一定時間切換圖片
+let intervalId = setInterval(switchToNextPicture, 3000); // 3000 毫秒表示每 3 秒切換一次
+if(window.innerWidth>768){
+    // 當點擊輪播按鈕時，切換到對應的圖片
+for (let i = 0; i < bannerRounds.length; i++) {
+    bannerRounds[i].addEventListener("click", function() {
+        currentImageIndex = i;
+        banner.src = "pic/banner" + (currentImageIndex + 1) + ".jpg";
+
+        // 重置定時器，防止自動輪播與手動切換衝突
+        clearInterval(intervalId);
+        intervalId = setInterval(switchToNextPicture, 10000);
+    });
+}
+}
