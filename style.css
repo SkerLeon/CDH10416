@@ -142,8 +142,6 @@ main{
     width: 48px;
     height: 64px;
 }
-
-
 .banner{
     width: 100%;
     position: relative;
@@ -151,11 +149,19 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
-.banner-bg img{
+.banner-bg{
     width: 100%;
-    transition:0.4s ease-in-out;
-    opacity: 1;
+    max-width: 1920px;
+    overflow: hidden;
+}
+.banner-bg-align{
+    width: 400%;
+    display: flex;
+    position: relative;
+    right: 0px;
+    transition: 1s;
 }
 .banner-link{
     display: flex;
