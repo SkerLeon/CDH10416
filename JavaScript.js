@@ -184,54 +184,63 @@ if(window.innerWidth>768){
     };
 }
 
-//banner 輪播及切換效果
-// let banner = document.getElementById("banner");
-// let bannerRounds = document.getElementsByClassName("banner-round");
-// let currentImageIndex = 0;
-
-// function switchToNextPicture() {
-//     // 將 banner 的不透明度設為 0，實現淡出效果
-//     banner.style.opacity = 0;
-
-//     // 等待一小段時間，然後切換到下一張圖片
-//     setTimeout(function() {
-//         currentImageIndex = (currentImageIndex + 1) % bannerRounds.length;
-//         banner.src = "pic/banner" + (currentImageIndex + 1) + ".jpg";
-
-//         // 將 banner 的不透明度設為 1，實現淡入效果
-//         banner.style.opacity = 1;
-//     }, 500); // 此處的 500 毫秒應與過渡效果的時間一致
-// }
-
-// // 使用定時器每隔一定時間切換圖片
-// let intervalId = setInterval(switchToNextPicture, 3000); // 3000 毫秒表示每 3 秒切換一次
-
-// // 當點擊輪播按鈕時，切換到對應的圖片
-// for (let i = 0; i < bannerRounds.length; i++) {
-//     bannerRounds[i].addEventListener("click", function() {
-//         currentImageIndex = i;
-//         banner.src = "pic/banner" + (currentImageIndex + 1) + ".jpg";
-
-//         // 重置定時器，防止自動輪播與手動切換衝突
-//         clearInterval(intervalId);
-//         intervalId = setInterval(switchToNextPicture, 3000);
-//     });
-// }
-
+//pc banner 輪播效果
+//banner 圓形link控制banner的圖
+let bannerRounds = document.getElementsByClassName("banner-round");
 let bannerBgAlign = document.getElementById("banner-bg-align");
 let bannerindex = 0;
 
+//宣告這個變數給bannerInterval同時啟動這個計時器
+bannerInterval = setInterval(bannerPush, 5000);
 
+//banner 輪播效果
 function bannerPush(){
-    if(bannerindex <= 5760){
+
+    //偵測position的數值去執行切換效果
+    if(bannerindex < 5760){
         bannerindex+= 1920;
         bannerBgAlign.style.right =  `${bannerindex}px`;
         bannerBgAlign.style.transition = "1s"; 
     }
-    if(bannerindex == 5760){
+
+    //當值到5760時5秒後自動設定動畫過度效果為無
+    if(bannerindex >= 5760){
         bannerindex = -1920;
-        // bannerBgAlign.style.transition = "none";
+        setTimeout(function(){
+            bannerBgAlign.style.transition = "none";
+        },5000)
     }
 }
 
-setInterval(bannerPush,5000);
+function linkControlBanner(e){
+    //在按下link的點點時
+    //清除計時器並新增 就會有重置的效果
+    clearInterval(bannerInterval);
+
+    if(e.target.id == "banner-round-A"){
+        bannerindex = 0
+        bannerBgAlign.style.right = "0px"
+    }
+    if(e.target.id == "banner-round-B"){
+        bannerindex = 1920
+        bannerBgAlign.style.right = "1920px"
+    }
+    if(e.target.id == "banner-round-C"){
+        bannerindex = 3840
+        bannerBgAlign.style.right = "3840px"
+    }
+    if(e.target.id == "banner-round-D"){
+        bannerindex = 5760
+        bannerBgAlign.style.right = "5760px"
+    }
+
+    bannerInterval = setInterval(bannerPush, 5000);
+}
+
+//-1920 0 3840 5760 4張圖position的數值
+if(window.innerWidth>768){
+    for (let i = 0; i < bannerRounds.length; i++) {
+        bannerRounds[i].addEventListener("click", linkControlBanner);
+    };
+}
+
