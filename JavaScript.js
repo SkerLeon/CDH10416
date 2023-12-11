@@ -189,6 +189,10 @@ if(window.innerWidth>768){
 let bannerRounds = document.getElementsByClassName("banner-round");
 let bannerBgAlign = document.getElementById("banner-bg-align");
 let bannerindex = 0;
+let bannerRoundA = document.getElementById("banner-round-A")
+let bannerRoundB = document.getElementById("banner-round-B")
+let bannerRoundC = document.getElementById("banner-round-C")
+let bannerRoundD = document.getElementById("banner-round-D")
 
 //宣告這個變數給bannerInterval同時啟動這個計時器
 bannerInterval = setInterval(bannerPush, 5000);
@@ -198,13 +202,38 @@ function bannerPush(){
 
     //偵測position的數值去執行切換效果
     if(bannerindex < 5760){
+        if(bannerindex == -1920){
+            bannerRoundA.style.backgroundColor = "#8F8686"
+            bannerRoundB.style.backgroundColor = "#F7F1F1"
+            bannerRoundC.style.backgroundColor = "#F7F1F1"
+            bannerRoundD.style.backgroundColor = "#F7F1F1"
+        }
+        if(bannerindex == 0){
+            bannerRoundA.style.backgroundColor = "#F7F1F1"
+            bannerRoundB.style.backgroundColor = "#8F8686"
+            bannerRoundC.style.backgroundColor = "#F7F1F1"
+            bannerRoundD.style.backgroundColor = "#F7F1F1"
+        }
+        if(bannerindex == 1920){
+            bannerRoundA.style.backgroundColor = "#F7F1F1"
+            bannerRoundB.style.backgroundColor = "#F7F1F1"
+            bannerRoundC.style.backgroundColor = "#8F8686"
+            bannerRoundD.style.backgroundColor = "#F7F1F1"
+        }
         bannerindex+= 1920;
         bannerBgAlign.style.right =  `${bannerindex}px`;
-        bannerBgAlign.style.transition = "1s"; 
+        bannerBgAlign.style.transition = "1s";
+        
     }
 
     //當值到5760時5秒後自動設定動畫過度效果為無
     if(bannerindex >= 5760){
+
+        bannerRoundA.style.backgroundColor = "#F7F1F1"
+        bannerRoundB.style.backgroundColor = "#F7F1F1"
+        bannerRoundC.style.backgroundColor = "#F7F1F1"
+        bannerRoundD.style.backgroundColor = "#8F8686"
+
         bannerindex = -1920;
         setTimeout(function(){
             bannerBgAlign.style.transition = "none";
@@ -218,18 +247,39 @@ function linkControlBanner(e){
     clearInterval(bannerInterval);
 
     if(e.target.id == "banner-round-A"){
+        bannerRoundA.style.backgroundColor = "#8F8686"
+        bannerRoundB.style.backgroundColor = "#F7F1F1"
+        bannerRoundC.style.backgroundColor = "#F7F1F1"
+        bannerRoundD.style.backgroundColor = "#F7F1F1"
+
         bannerindex = 0
         bannerBgAlign.style.right = "0px"
     }
     if(e.target.id == "banner-round-B"){
+
+        bannerRoundA.style.backgroundColor = "#F7F1F1"
+        bannerRoundB.style.backgroundColor = "#8F8686"
+        bannerRoundC.style.backgroundColor = "#F7F1F1"
+        bannerRoundD.style.backgroundColor = "#F7F1F1"
+
         bannerindex = 1920
         bannerBgAlign.style.right = "1920px"
     }
     if(e.target.id == "banner-round-C"){
+        bannerRoundA.style.backgroundColor = "#F7F1F1"
+        bannerRoundB.style.backgroundColor = "#F7F1F1"
+        bannerRoundC.style.backgroundColor = "#8F8686"
+        bannerRoundD.style.backgroundColor = "#F7F1F1"
+
         bannerindex = 3840
         bannerBgAlign.style.right = "3840px"
     }
     if(e.target.id == "banner-round-D"){
+        bannerRoundA.style.backgroundColor = "#F7F1F1"
+        bannerRoundB.style.backgroundColor = "#F7F1F1"
+        bannerRoundC.style.backgroundColor = "#F7F1F1"
+        bannerRoundD.style.backgroundColor = "#8F8686"
+        
         bannerindex = 5760
         bannerBgAlign.style.right = "5760px"
     }

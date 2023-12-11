@@ -172,6 +172,9 @@ main{
     left: 46.5%;
     bottom: 22%;
 }
+#banner-round-A{
+    background-color: #8F8686;
+}
 .banner-round{
     width: 20px;
     height: 20px;
@@ -179,7 +182,6 @@ main{
     background-color: #F7F1F1;
 }
 .banner-round:hover{
-    background-color: #8F8686;
     cursor: pointer;
 }
 .banner-wave{
