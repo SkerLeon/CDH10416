@@ -154,11 +154,9 @@ main{
 .banner-bg{
     width: 100%;
     max-width: 1920px;
-    min-width: 1920px;
     overflow: hidden;
 }
 .banner-bg-align{
-    width: 400%;
     display: flex;
     position: relative;
     right: 0px;

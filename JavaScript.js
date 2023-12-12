@@ -201,7 +201,7 @@ bannerInterval = setInterval(bannerPush, 5000);
 function bannerPush(){
 
     //偵測position的數值去執行切換效果
-    if(bannerindex < 5760){
+    if(bannerindex < 7680){
         if(bannerindex == -1920){
             bannerRoundA.style.backgroundColor = "#8F8686"
             bannerRoundB.style.backgroundColor = "#F7F1F1"
@@ -220,26 +220,34 @@ function bannerPush(){
             bannerRoundC.style.backgroundColor = "#8F8686"
             bannerRoundD.style.backgroundColor = "#F7F1F1"
         }
+        if(bannerindex == 3840){
+            bannerRoundA.style.backgroundColor = "#F7F1F1"
+            bannerRoundB.style.backgroundColor = "#F7F1F1"
+            bannerRoundC.style.backgroundColor = "#F7F1F1"
+            bannerRoundD.style.backgroundColor = "#8F8686"
+        }
+        
         bannerindex+= 1920;
         bannerBgAlign.style.right =  `${bannerindex}px`;
         bannerBgAlign.style.transition = "1s";
-        
-    }
+         //當值到7680時5秒後自動設定動畫過度效果為無
+        if(bannerindex == 7680){
+            bannerRoundA.style.backgroundColor = "#8F8686"
+            bannerRoundB.style.backgroundColor = "#F7F1F1"
+            bannerRoundC.style.backgroundColor = "#F7F1F1"
+            bannerRoundD.style.backgroundColor = "#F7F1F1"
 
-    //當值到5760時5秒後自動設定動畫過度效果為無
-    if(bannerindex >= 5760){
-
-        bannerRoundA.style.backgroundColor = "#F7F1F1"
-        bannerRoundB.style.backgroundColor = "#F7F1F1"
-        bannerRoundC.style.backgroundColor = "#F7F1F1"
-        bannerRoundD.style.backgroundColor = "#8F8686"
-
-        bannerindex = -1920;
-        setTimeout(function(){
-            bannerBgAlign.style.transition = "none";
-        },5000)
+            bannerindex = -1920;
+            setTimeout(function(){
+                bannerBgAlign.style.transition = "none";
+            },5000)
+        }
     }
 }
+
+
+
+
 
 function linkControlBanner(e){
     //在按下link的點點時
@@ -287,7 +295,7 @@ function linkControlBanner(e){
     bannerInterval = setInterval(bannerPush, 5000);
 }
 
-//-1920 0 3840 5760 4張圖position的數值
+//-1920 0 3840 5760 7680 5張圖position的數值
 if(window.innerWidth>768){
     for (let i = 0; i < bannerRounds.length; i++) {
         bannerRounds[i].addEventListener("click", linkControlBanner);
