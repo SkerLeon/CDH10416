@@ -835,6 +835,7 @@ main{
 }
 .activity-item-img img{
     width: 100%;
+    transition: 0.3s;
 }
 .activity-item-text{
     width: 42%;

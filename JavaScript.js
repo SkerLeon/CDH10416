@@ -521,3 +521,49 @@ if(window.innerWidth>768){
         filterItemDog[i].addEventListener("mouseleave", DOGSHOWSelectionEffectOut);
     };
 }
+
+//dog activity 動態效果
+let activityItem = document.getElementsByClassName("activity-item")
+
+let activityItemImg01 =document.getElementById("activity-item-img-01")
+let activityItemImg02 =document.getElementById("activity-item-img-02")
+let activityItemImg03 =document.getElementById("activity-item-img-03")
+let activityItemImg04 =document.getElementById("activity-item-img-04")
+
+function dogActivityDynamicEffectIn (e){
+    if(e.target.id == "activity-item-01"){
+        activityItemImg01.style.transform = "scale(1.1)"
+    }
+    if(e.target.id == "activity-item-02"){
+        activityItemImg02.style.transform = "scale(1.1)"
+    }
+    if(e.target.id == "activity-item-03"){
+        activityItemImg03.style.transform = "scale(1.1)"
+    }
+    if(e.target.id == "activity-item-04"){
+        activityItemImg04.style.transform = "scale(1.1)"
+    }
+} 
+
+function dogActivityDynamicEffectOut (e){
+    if(e.target.id == "activity-item-01"){
+        activityItemImg01.style.transform = "scale(1)"
+    }
+    if(e.target.id == "activity-item-02"){
+        activityItemImg02.style.transform = "scale(1)"
+    }
+    if(e.target.id == "activity-item-03"){
+        activityItemImg03.style.transform = "scale(1)"
+    }
+    if(e.target.id == "activity-item-04"){
+        activityItemImg04.style.transform = "scale(1)"
+    }
+}
+
+if(window.innerWidth>768){
+    for (let i = 0; i < activityItem.length; i++) {
+        activityItem[i].addEventListener("mouseenter", dogActivityDynamicEffectIn);
+
+        activityItem[i].addEventListener("mouseleave", dogActivityDynamicEffectOut);
+    };
+}
