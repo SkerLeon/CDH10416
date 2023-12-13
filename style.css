@@ -592,7 +592,8 @@ main{
 
 
 .filter-item{
-    width: 1023px;
+    width: 54%;
+    min-width: 1023px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -601,20 +602,107 @@ main{
     column-gap: 30px;
 }
 .filter-item-dog{
-    width: 320px;
+    width: 31%;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
 }
-.item-dog-img{
-    margin-bottom: 16px;
-}
-.item-dog-img img{
+
+
+.item-dog-pic{
     width: 100%;
-    vertical-align: middle;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
+.dog-pic-img{
+    width: 83%;
+    height: 255px;
+    border-radius: 61px;
+    overflow: hidden;
+    position: relative;
+}
+.dog-pic-img img{
+    width: 100%;
+}
+.dog-pic-dotted{
+    width: 100%;
+    position: absolute;
+    top: -28px;
+}
+.dog-pic-dotted img{
+    width: 100%;
+}
+
+
+.dog-pic-img-1{
+    position: absolute;
+    transform: scale(1);
+}
+.dog-pic-img-2{
+    position: absolute;
+    transform: scale(2);
+    bottom: 50px;
+    left: 20px;
+}
+.dog-pic-img-3{
+    position: absolute;
+    transform: scale(1.4);
+    bottom: 30px;
+}
+.dog-pic-img-4{
+    position: absolute;
+    transform: scale(2);
+    bottom: 0px;
+    right: 15px;
+}
+.dog-pic-img-5{
+    position: absolute;
+    transform: scale(1);
+    top: -30px;
+}
+.dog-pic-img-6{
+    position: absolute;
+    transform: scale(1.8);
+    top:50px;
+}
+.dog-pic-img-7{
+    position: absolute;
+    transform: scale(2.2);
+    bottom: 28px;
+    right: 20px;
+}
+.dog-pic-img-8{
+    position: absolute;
+    transform: scale(1);
+    bottom: -75px;
+}
+.dog-pic-img-9{
+    position: absolute;
+    transform: scale(1);
+    top: -15px;
+}
+.dog-pic-img-10{
+    position: absolute;
+    transform: scale(1);
+}
+.dog-pic-img-11{
+    position: absolute;
+    transform: scale(1);
+    bottom: -50px;
+}
+.dog-pic-img-12{
+    position: absolute;
+    transform: scale(1.2);
+    top: 0px;
+    right: 15px;
+}
+
+
 .item-dog-nickname{
     display: flex;
     justify-content: center;
@@ -624,12 +712,13 @@ main{
     background-color: #F7F6F188;
     border-radius: 154px;
     position: absolute;
-    top: 50%;
+    top: 48%;
 }
 .item-dog-nickname span{
     font-size: 24px;
     font-weight: bold;
-    letter-spacing: 5px;  
+    letter-spacing: 5px;
+    color: #474143;  
 }
 .item-dog-introduce{
     font-size: 20px;
@@ -637,25 +726,20 @@ main{
     text-align: center;
     margin-bottom: 16px;
     line-height: 30px;
+    color: #474143;
 }
-.filter-item-btn{
+.filter-item-h2{
+    display: block;
     width: 122px;
     height: 50px;
     border-radius: 50px;
     background-color:#3A3967;
     font-size: 20px;
     font-weight: bold;
-    border: none;
     color: #ffffff;
     text-align: center;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.filter-item-btn:hover{
-    background-color: #F4B410;
-    cursor: pointer;
+    box-sizing: border-box;
+    padding-top: 13px;
 }
 
 

@@ -255,6 +255,7 @@ function linkControlBanner(e){
     clearInterval(bannerInterval);
 
     if(e.target.id == "banner-round-A"){
+        bannerBgAlign.style.transition = "1s"
         bannerRoundA.style.backgroundColor = "#8F8686"
         bannerRoundB.style.backgroundColor = "#F7F1F1"
         bannerRoundC.style.backgroundColor = "#F7F1F1"
@@ -264,7 +265,7 @@ function linkControlBanner(e){
         bannerBgAlign.style.right = "0px"
     }
     if(e.target.id == "banner-round-B"){
-
+        bannerBgAlign.style.transition = "1s"
         bannerRoundA.style.backgroundColor = "#F7F1F1"
         bannerRoundB.style.backgroundColor = "#8F8686"
         bannerRoundC.style.backgroundColor = "#F7F1F1"
@@ -274,6 +275,7 @@ function linkControlBanner(e){
         bannerBgAlign.style.right = "1920px"
     }
     if(e.target.id == "banner-round-C"){
+        bannerBgAlign.style.transition = "1s"
         bannerRoundA.style.backgroundColor = "#F7F1F1"
         bannerRoundB.style.backgroundColor = "#F7F1F1"
         bannerRoundC.style.backgroundColor = "#8F8686"
@@ -283,6 +285,7 @@ function linkControlBanner(e){
         bannerBgAlign.style.right = "3840px"
     }
     if(e.target.id == "banner-round-D"){
+        bannerBgAlign.style.transition = "1s"
         bannerRoundA.style.backgroundColor = "#F7F1F1"
         bannerRoundB.style.backgroundColor = "#F7F1F1"
         bannerRoundC.style.backgroundColor = "#F7F1F1"

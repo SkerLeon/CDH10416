@@ -323,17 +323,30 @@
     .filter-item{
         width: 90%;
         row-gap: 5px;
+        min-width: 340px;
     }
     .filter-item-dog{
         width: 43%;
     }
-    .item-dog-img{
-        margin-bottom: 10px;
+    .item-dog-pic{
+        margin-bottom: 20px;
     }
+    .dog-pic-img{
+        width: 137px;
+        height: 137px;
+        border-radius: 34px;
+    }
+    .dog-pic-dotted{
+        width: 166px;
+        height: 166px;
+        top: -17px;
+    }
+
     .item-dog-nickname{
         width: 105px;
         height: 29px;
         top: 40%;
+
     }
     .item-dog-nickname span{
         font-size: 16px;
@@ -344,11 +357,35 @@
         line-height: 20px;
         margin-bottom: 10px;
     }
-    .filter-item-btn{
+    .filter-item-h2{
         width: 96px;
         height: 33px;
         font-size: 16px;
+        padding-top:8px;;
     }
+    .dog-pic-img-2{
+        bottom: 30px;
+    }
+    .dog-pic-img-3{
+        top: 20px;
+    }
+    .dog-pic-img-4{
+        top: 35px;
+    }
+    .dog-pic-img-6{
+        top: 20px;
+    }
+    .dog-pic-img-8{
+        top: -30px;
+    }
+    .dog-pic-img-11{
+        top: -50px;
+    }
+    .dog-pic-img-12{
+        right: 10px;
+        top: 15px;
+    }
+    
 
     /* dogtalk MB CSS */
     .dog-video{
