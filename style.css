@@ -868,16 +868,49 @@ main{
     margin: auto;
 }
 .dogabout-conter{
-    width: 66%;
-    margin: auto;
+    width: 66%; 
+    min-width: 904px;
+    margin: 80px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
 }
-.dogabout-conter-img img{
-    width: 100%;    
+.dogabout-conter-pic{
+    position: relative;
+    margin-bottom: 80px;
 }
+.pentagon-style{
+    width: 307px;
+    height: 307px;
+    clip-path: polygon(15.6% 11.7%,64% 0%,100% 37.4%,84.3% 88.2%,34.5% 100%,0% 62.5%);
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.conter-pic-pentagon-01 img{
+    width: 100%;
+    position: absolute;
+    transform: scale(1.7);
+    top: 50px;
+    left: 30px;
+    transition: 0.3s;
+}
+.conter-pic-pentagon-02 img{
+    width: 100%;
+    position: absolute;
+    transform: scale(1.2);
+    top: -80px;
+    transition: 0.3s;
+}
+.conter-pic-dotted{
+    position: absolute;
+    top: 0;
+}
+.conter-pic-dotted img{
+    width: 100%;
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+
 .dogabout-conter-text h1{
     font-size: 32px;
     font-weight: bold;

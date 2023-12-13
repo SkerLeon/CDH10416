@@ -567,3 +567,40 @@ if(window.innerWidth>768){
         activityItem[i].addEventListener("mouseleave", dogActivityDynamicEffectOut);
     };
 }
+
+//dogabout 動態效果
+let dogaboutConter = document.getElementsByClassName("dogabout-conter")
+let conterPicPentagon01 = document.getElementById("conter-pic-pentagon-01")
+let conterPicDotted01 = document.getElementById("conter-pic-dotted-01")
+let conterPicPentagon02 = document.getElementById("conter-pic-pentagon-02")
+let conterPicDotted02 = document.getElementById("conter-pic-dotted-02")
+
+function dogaboutDynamicEffectIn(e){
+    if(e.target.id == "dogabout-conter-A"){
+        conterPicPentagon01.style.transform = "scale(1.7)"
+        conterPicDotted01.style.transform ="scale(1.4)"
+    }
+    if(e.target.id == "dogabout-conter-B"){
+        conterPicPentagon02.style.transform = "scale(1.1)"
+        conterPicDotted02.style.transform ="scale(1.4)"
+    }
+}
+
+function dogaboutDynamicEffectOut(e){
+    if(e.target.id == "dogabout-conter-A"){
+        conterPicPentagon01.style.transform = "scale(1.8)"
+        conterPicDotted01.style.transform ="scale(1.3)"
+    }
+
+    if(e.target.id == "dogabout-conter-B"){
+        conterPicPentagon02.style.transform = "scale(1.2)"
+        conterPicDotted02.style.transform ="scale(1.3)"
+    }
+}
+
+if(window.innerWidth>768){
+    for (let i = 0; i < dogaboutConter.length; i++) {
+        dogaboutConter[i].addEventListener("mouseenter", dogaboutDynamicEffectIn);
+        dogaboutConter[i].addEventListener("mouseleave", dogaboutDynamicEffectOut);
+    };
+}

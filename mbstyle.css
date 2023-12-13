@@ -452,10 +452,19 @@
     /* dogabout mb CSS */
     .dogabout{
         width: 90%;
-        margin-top: 100px;
+        margin-top: 160px;
     }
     .dogabout-conter{
         width: 100%;
+        min-width: 352px;
+    }
+    .pentagon-style{
+        width: 240px;
+        height: 240px;
+    }
+    .conter-pic-pentagon-01 img{
+        transform: scale(1.6);
+        top: 45px;
     }
     .dogabout-conter-text h1{
         font-size: 18px;
@@ -463,15 +472,7 @@
     .dogabout-conter-text p{
         font-size: 16px;
     }
-    .dogabout-conter-img{
-        display: flex;
-        justify-content: center;
-    }
-    .dogabout-conter-img img{
-        width: 70%;
-
-    }
-
+    
     /* dogdonate mb CSS */
     .dogdonate{
         width: 90%;
