@@ -200,47 +200,49 @@ bannerInterval = setInterval(bannerPush, 5000);
 //banner 輪播效果
 function bannerPush(){
 
-    //偵測position的數值去執行切換效果
-    if(bannerindex < 7680){
-        if(bannerindex == -1920){
-            bannerRoundA.style.backgroundColor = "#8F8686"
-            bannerRoundB.style.backgroundColor = "#F7F1F1"
-            bannerRoundC.style.backgroundColor = "#F7F1F1"
-            bannerRoundD.style.backgroundColor = "#F7F1F1"
-        }
-        if(bannerindex == 0){
-            bannerRoundA.style.backgroundColor = "#F7F1F1"
-            bannerRoundB.style.backgroundColor = "#8F8686"
-            bannerRoundC.style.backgroundColor = "#F7F1F1"
-            bannerRoundD.style.backgroundColor = "#F7F1F1"
-        }
-        if(bannerindex == 1920){
-            bannerRoundA.style.backgroundColor = "#F7F1F1"
-            bannerRoundB.style.backgroundColor = "#F7F1F1"
-            bannerRoundC.style.backgroundColor = "#8F8686"
-            bannerRoundD.style.backgroundColor = "#F7F1F1"
-        }
-        if(bannerindex == 3840){
-            bannerRoundA.style.backgroundColor = "#F7F1F1"
-            bannerRoundB.style.backgroundColor = "#F7F1F1"
-            bannerRoundC.style.backgroundColor = "#F7F1F1"
-            bannerRoundD.style.backgroundColor = "#8F8686"
-        }
-        
-        bannerindex+= 1920;
-        bannerBgAlign.style.right =  `${bannerindex}px`;
-        bannerBgAlign.style.transition = "1s";
-         //當值到7680時5秒後自動設定動畫過度效果為無
-        if(bannerindex == 7680){
-            bannerRoundA.style.backgroundColor = "#8F8686"
-            bannerRoundB.style.backgroundColor = "#F7F1F1"
-            bannerRoundC.style.backgroundColor = "#F7F1F1"
-            bannerRoundD.style.backgroundColor = "#F7F1F1"
+    if(window.innerWidth>768){
+        //偵測position的數值去執行切換效果
+        if(bannerindex < 7680){
+            if(bannerindex == -1920){
+                bannerRoundA.style.backgroundColor = "#F7F1F1"
+                bannerRoundB.style.backgroundColor = "#8F8686"
+                bannerRoundC.style.backgroundColor = "#8F8686"
+                bannerRoundD.style.backgroundColor = "#8F8686"
+            }
+            if(bannerindex == 0){
+                bannerRoundA.style.backgroundColor = "#8F8686"
+                bannerRoundB.style.backgroundColor = "#F7F1F1"
+                bannerRoundC.style.backgroundColor = "#8F8686"
+                bannerRoundD.style.backgroundColor = "#8F8686"
+            }
+            if(bannerindex == 1920){
+                bannerRoundA.style.backgroundColor = "#8F8686"
+                bannerRoundB.style.backgroundColor = "#8F8686"
+                bannerRoundC.style.backgroundColor = "#F7F1F1"
+                bannerRoundD.style.backgroundColor = "#8F8686"
+            }
+            if(bannerindex == 3840){
+                bannerRoundA.style.backgroundColor = "#8F8686"
+                bannerRoundB.style.backgroundColor = "#8F8686"
+                bannerRoundC.style.backgroundColor = "#8F8686"
+                bannerRoundD.style.backgroundColor = "#F7F1F1"
+            }
+            
+            bannerindex+= 1920;
+            bannerBgAlign.style.right =  `${bannerindex}px`;
+            bannerBgAlign.style.transition = "1s";
+            //當值到7680時5秒後自動設定動畫過度效果為無
+            if(bannerindex == 7680){
+                bannerRoundA.style.backgroundColor = "#F7F1F1"
+                bannerRoundB.style.backgroundColor = "#8F8686"
+                bannerRoundC.style.backgroundColor = "#8F8686"
+                bannerRoundD.style.backgroundColor = "#8F8686"
 
-            bannerindex = -1920;
-            setTimeout(function(){
-                bannerBgAlign.style.transition = "none";
-            },5000)
+                bannerindex = -1920;
+                setTimeout(function(){
+                    bannerBgAlign.style.transition = "none";
+                },5000)
+            }
         }
     }
 }
@@ -252,40 +254,40 @@ function linkControlBanner(e){
 
     if(e.target.id == "banner-round-A"){
         bannerBgAlign.style.transition = "1s"
-        bannerRoundA.style.backgroundColor = "#8F8686"
-        bannerRoundB.style.backgroundColor = "#F7F1F1"
-        bannerRoundC.style.backgroundColor = "#F7F1F1"
-        bannerRoundD.style.backgroundColor = "#F7F1F1"
+        bannerRoundA.style.backgroundColor = "#F7F1F1"
+        bannerRoundB.style.backgroundColor = "#8F8686"
+        bannerRoundC.style.backgroundColor = "#8F8686"
+        bannerRoundD.style.backgroundColor = "#8F8686"
 
         bannerindex = 0
         bannerBgAlign.style.right = "0px"
     }
     if(e.target.id == "banner-round-B"){
         bannerBgAlign.style.transition = "1s"
-        bannerRoundA.style.backgroundColor = "#F7F1F1"
-        bannerRoundB.style.backgroundColor = "#8F8686"
-        bannerRoundC.style.backgroundColor = "#F7F1F1"
-        bannerRoundD.style.backgroundColor = "#F7F1F1"
+        bannerRoundA.style.backgroundColor = "#8F8686"
+        bannerRoundB.style.backgroundColor = "#F7F1F1"
+        bannerRoundC.style.backgroundColor = "#8F8686"
+        bannerRoundD.style.backgroundColor = "#8F8686"
 
         bannerindex = 1920
         bannerBgAlign.style.right = "1920px"
     }
     if(e.target.id == "banner-round-C"){
         bannerBgAlign.style.transition = "1s"
-        bannerRoundA.style.backgroundColor = "#F7F1F1"
-        bannerRoundB.style.backgroundColor = "#F7F1F1"
-        bannerRoundC.style.backgroundColor = "#8F8686"
-        bannerRoundD.style.backgroundColor = "#F7F1F1"
+        bannerRoundA.style.backgroundColor = "#8F8686"
+        bannerRoundB.style.backgroundColor = "#8F8686"
+        bannerRoundC.style.backgroundColor = "#F7F1F1"
+        bannerRoundD.style.backgroundColor = "#8F8686"
 
         bannerindex = 3840
         bannerBgAlign.style.right = "3840px"
     }
     if(e.target.id == "banner-round-D"){
         bannerBgAlign.style.transition = "1s"
-        bannerRoundA.style.backgroundColor = "#F7F1F1"
-        bannerRoundB.style.backgroundColor = "#F7F1F1"
-        bannerRoundC.style.backgroundColor = "#F7F1F1"
-        bannerRoundD.style.backgroundColor = "#8F8686"
+        bannerRoundA.style.backgroundColor = "#8F8686"
+        bannerRoundB.style.backgroundColor = "#8F8686"
+        bannerRoundC.style.backgroundColor = "#8F8686"
+        bannerRoundD.style.backgroundColor = "#F7F1F1"
         
         bannerindex = 5760
         bannerBgAlign.style.right = "5760px"
@@ -298,6 +300,120 @@ function linkControlBanner(e){
 if(window.innerWidth>768){
     for (let i = 0; i < bannerRounds.length; i++) {
         bannerRounds[i].addEventListener("click", linkControlBanner);
+    };
+}
+
+
+//mb banner 輪播及點擊效果
+//banner 圓形link控制banner的圖
+let mbBannerBgAlign = document.getElementById("mb-banner-bg-align");
+let mbbannerindex = 0;
+
+//宣告這個變數給mbbannerInterval同時啟動這個計時器
+mbbannerInterval = setInterval(mbbannerPush, 5000);
+
+//banner 輪播效果
+function mbbannerPush(){
+    if(window.innerWidth <= 768){
+        //偵測position的數值去執行切換效果
+        if(mbbannerindex < 3072){
+            if(mbbannerindex == -768){
+                bannerRoundA.style.backgroundColor = "#F7F1F1"
+                bannerRoundB.style.backgroundColor = "#8F8686"
+                bannerRoundC.style.backgroundColor = "#8F8686"
+                bannerRoundD.style.backgroundColor = "#8F8686"
+            }
+            if(mbbannerindex == 0){
+                bannerRoundA.style.backgroundColor = "#8F8686"
+                bannerRoundB.style.backgroundColor = "#F7F1F1"
+                bannerRoundC.style.backgroundColor = "#8F8686"
+                bannerRoundD.style.backgroundColor = "#8F8686"
+            }
+            if(mbbannerindex == 1536){
+                bannerRoundA.style.backgroundColor = "#8F8686"
+                bannerRoundB.style.backgroundColor = "#8F8686"
+                bannerRoundC.style.backgroundColor = "#F7F1F1"
+                bannerRoundD.style.backgroundColor = "#8F8686"
+            }
+            if(mbbannerindex == 2304){
+                bannerRoundA.style.backgroundColor = "#8F8686"
+                bannerRoundB.style.backgroundColor = "#8F8686"
+                bannerRoundC.style.backgroundColor = "#8F8686"
+                bannerRoundD.style.backgroundColor = "#F7F1F1"
+            }
+            
+            mbbannerindex+= 768;
+            mbBannerBgAlign.style.right = `${mbbannerindex}px`;
+            mbBannerBgAlign.style.transition = "1s";
+            //當值到3072時5秒後自動設定動畫過度效果為無
+            if(mbbannerindex == 3072){
+                bannerRoundA.style.backgroundColor = "#F7F1F1"
+                bannerRoundB.style.backgroundColor = "#8F8686"
+                bannerRoundC.style.backgroundColor = "#8F8686"
+                bannerRoundD.style.backgroundColor = "#8F8686"
+
+                mbbannerindex = -768;
+                setTimeout(function(){
+                    mbBannerBgAlign.style.transition = "none";
+                },5000)
+            }
+        }
+    }
+}
+
+function mblinkControlBanner(e){
+    //在按下link的點點時
+    //清除計時器並新增 就會有重置的效果
+    clearInterval(mbbannerInterval);
+
+    if(e.target.id == "banner-round-A"){
+        mbBannerBgAlign.style.transition = "1s"
+        bannerRoundA.style.backgroundColor = "#F7F1F1"
+        bannerRoundB.style.backgroundColor = "#8F8686"
+        bannerRoundC.style.backgroundColor = "#8F8686"
+        bannerRoundD.style.backgroundColor = "#8F8686"
+
+        mbbannerindex = 0
+        mbBannerBgAlign.style.right = "0px"
+    }
+    if(e.target.id == "banner-round-B"){
+        mbBannerBgAlign.style.transition = "1s"
+        bannerRoundA.style.backgroundColor = "#8F8686"
+        bannerRoundB.style.backgroundColor = "#F7F1F1"
+        bannerRoundC.style.backgroundColor = "#8F8686"
+        bannerRoundD.style.backgroundColor = "#8F8686"
+
+        mbbannerindex = 768
+        mbBannerBgAlign.style.right = "768px"
+    }
+    if(e.target.id == "banner-round-C"){
+        mbBannerBgAlign.style.transition = "1s"
+        bannerRoundA.style.backgroundColor = "#8F8686"
+        bannerRoundB.style.backgroundColor = "#8F8686"
+        bannerRoundC.style.backgroundColor = "#F7F1F1"
+        bannerRoundD.style.backgroundColor = "#8F8686"
+
+        mbbannerindex = 1536
+        mbBannerBgAlign.style.right = "1536px"
+    }
+    if(e.target.id == "banner-round-D"){
+        mbBannerBgAlign.style.transition = "1s"
+        bannerRoundA.style.backgroundColor = "#8F8686"
+        bannerRoundB.style.backgroundColor = "#8F8686"
+        bannerRoundC.style.backgroundColor = "#8F8686"
+        bannerRoundD.style.backgroundColor = "#F7F1F1"
+        
+        mbbannerindex = 2304
+        mbBannerBgAlign.style.right = "2304px"
+    }
+
+    mbbannerInterval = setInterval(mbbannerPush, 5000);
+}
+
+//-1920 0 3840 5760 7680 5張圖position的數值
+if(window.innerWidth <= 768){
+    for (let i = 0; i < bannerRounds.length; i++) {
+        bannerRounds[i].addEventListener("click", mblinkControlBanner);
     };
 }
 
@@ -443,73 +559,73 @@ function DOGSHOWSelectionEffectOut (e){
     if(e.target.id == "item-dog-01"){
         dogPicImg01.style.transform = "scale(1)"
         itemDogNickname01.style.color = "#474143"
-        itemDogIntroduce01.style.color = "#474143"
+        itemDogIntroduce01.style.color = "#7A7677"
         filterItemH201.style.backgroundColor ="#3A3967"
     }
     if(e.target.id == "item-dog-02"){
         dogPicImg02.style.transform = "scale(2)"
         itemDogNickname02.style.color = "#474143"
-        itemDogIntroduce02.style.color = "#474143"
+        itemDogIntroduce02.style.color = "#7A7677"
         filterItemH202.style.backgroundColor ="#3A3967"
     }
     if(e.target.id == "item-dog-03"){
         dogPicImg03.style.transform = "scale(1.4)"
         itemDogNickname03.style.color = "#474143"
-        itemDogIntroduce03.style.color = "#474143"
+        itemDogIntroduce03.style.color = "#7A7677"
         filterItemH203.style.backgroundColor ="#3A3967"
     }
     if(e.target.id == "item-dog-04"){
         dogPicImg04.style.transform = "scale(2)"
         itemDogNickname04.style.color = "#474143"
-        itemDogIntroduce04.style.color = "#474143"
+        itemDogIntroduce04.style.color = "#7A7677"
         filterItemH204.style.backgroundColor ="#3A3967"
     }
     if(e.target.id == "item-dog-05"){
         dogPicImg05.style.transform = "scale(1)"
         itemDogNickname05.style.color = "#474143"
-        itemDogIntroduce05.style.color = "#474143"
+        itemDogIntroduce05.style.color = "#7A7677"
         filterItemH205.style.backgroundColor ="#3A3967"
     }
     if(e.target.id == "item-dog-06"){
         dogPicImg06.style.transform = "scale(1.8)"
         itemDogNickname06.style.color = "#474143"
-        itemDogIntroduce06.style.color = "#474143"
+        itemDogIntroduce06.style.color = "#7A7677"
         filterItemH206.style.backgroundColor ="#3A3967"
     }
     if(e.target.id == "item-dog-07"){
         dogPicImg07.style.transform = "scale(2.2)"
         itemDogNickname07.style.color = "#474143"
-        itemDogIntroduce07.style.color = "#474143"
+        itemDogIntroduce07.style.color = "#7A7677"
         filterItemH207.style.backgroundColor ="#3A3967"
     }
     if(e.target.id == "item-dog-08"){
         dogPicImg08.style.transform = "scale(1)"
         itemDogNickname08.style.color = "#474143"
-        itemDogIntroduce08.style.color = "#474143"
+        itemDogIntroduce08.style.color = "#7A7677"
         filterItemH208.style.backgroundColor ="#3A3967"
     }
     if(e.target.id == "item-dog-09"){
         dogPicImg09.style.transform = "scale(1)"
         itemDogNickname09.style.color = "#474143"
-        itemDogIntroduce09.style.color = "#474143"
+        itemDogIntroduce09.style.color = "#7A7677"
         filterItemH209.style.backgroundColor ="#3A3967"
     }
     if(e.target.id == "item-dog-10"){
         dogPicImg10.style.transform = "scale(1)"
         itemDogNickname10.style.color = "#474143"
-        itemDogIntroduce10.style.color = "#474143"
+        itemDogIntroduce10.style.color = "#7A7677"
         filterItemH210.style.backgroundColor ="#3A3967"
     }
     if(e.target.id == "item-dog-11"){
         dogPicImg11.style.transform = "scale(1)"
         itemDogNickname11.style.color = "#474143"
-        itemDogIntroduce11.style.color = "#474143"
+        itemDogIntroduce11.style.color = "#7A7677"
         filterItemH211.style.backgroundColor ="#3A3967"
     }
     if(e.target.id == "item-dog-12"){
         dogPicImg12.style.transform = "scale(1.2)"
         itemDogNickname12.style.color = "#474143"
-        itemDogIntroduce12.style.color = "#474143"
+        itemDogIntroduce12.style.color = "#7A7677"
         filterItemH212.style.backgroundColor ="#3A3967"
     }
 }

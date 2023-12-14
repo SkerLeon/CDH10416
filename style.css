@@ -170,13 +170,14 @@ main{
     left: 46.5%;
     bottom: 22%;
 }
-#banner-round-A{
-    background-color: #8F8686;
-}
 .banner-round{
     width: 20px;
     height: 20px;
     border-radius: 50%;
+    background-color: #8F8686;
+    border: 3px solid white;
+}
+#banner-round-A{
     background-color: #F7F1F1;
 }
 .banner-round:hover{
@@ -732,7 +733,7 @@ main{
     text-align: center;
     margin-bottom: 16px;
     line-height: 30px;
-    color: #474143;
+    color: #7A7677;
     transition: 0.3s;
 }
 .filter-item-h2{

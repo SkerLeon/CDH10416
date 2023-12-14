@@ -107,10 +107,17 @@
     .banner{
         bottom: -70px;
     }
-    .mb-banner-bg{
+    .mb-banner-bg{ 
         display: block;
         width: 100%;
-        z-index: -1;
+        max-width: 768px;
+        overflow: hidden;
+    }
+    .mb-banner-bg-align{
+        display: flex;
+        position: relative;
+        right: 0px;
+        transition: 1s;
     }
     .mb-banner-bg img{
         width: 100%;
@@ -119,8 +126,8 @@
         display: block;
         width: 100%;
         position: absolute;
-        bottom:0%;
-        z-index: -1;
+        bottom:-1%;
+        z-index: 0;
     }
     .mb-banner-arc-pic img{
         width: 100%;
@@ -128,11 +135,12 @@
     .banner-link{
         bottom: 10%;
         left: 43%;
-        
+        z-index: 1;
     }
     .banner-round{
         width: 8px;
         height: 8px;
+        border: 2px solid white;
     }
 
     /* footer mb CSS */
