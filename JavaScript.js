@@ -316,8 +316,8 @@ mbbannerInterval = setInterval(mbbannerPush, 5000);
 function mbbannerPush(){
     if(window.innerWidth <= 768){
         //偵測position的數值去執行切換效果
-        if(mbbannerindex < 3072){
-            if(mbbannerindex == -768){
+        if(mbbannerindex < window.innerWidth*4){
+            if(mbbannerindex == window.innerWidth * -1){
                 bannerRoundA.style.backgroundColor = "#F7F1F1"
                 bannerRoundB.style.backgroundColor = "#8F8686"
                 bannerRoundC.style.backgroundColor = "#8F8686"
@@ -329,30 +329,30 @@ function mbbannerPush(){
                 bannerRoundC.style.backgroundColor = "#8F8686"
                 bannerRoundD.style.backgroundColor = "#8F8686"
             }
-            if(mbbannerindex == 1536){
+            if(mbbannerindex == window.innerWidth*2 ){
                 bannerRoundA.style.backgroundColor = "#8F8686"
                 bannerRoundB.style.backgroundColor = "#8F8686"
                 bannerRoundC.style.backgroundColor = "#F7F1F1"
                 bannerRoundD.style.backgroundColor = "#8F8686"
             }
-            if(mbbannerindex == 2304){
+            if(mbbannerindex == window.innerWidth*3){
                 bannerRoundA.style.backgroundColor = "#8F8686"
                 bannerRoundB.style.backgroundColor = "#8F8686"
                 bannerRoundC.style.backgroundColor = "#8F8686"
                 bannerRoundD.style.backgroundColor = "#F7F1F1"
             }
             
-            mbbannerindex+= 768;
+            mbbannerindex+= window.innerWidth;
             mbBannerBgAlign.style.right = `${mbbannerindex}px`;
             mbBannerBgAlign.style.transition = "1s";
             //當值到3072時5秒後自動設定動畫過度效果為無
-            if(mbbannerindex == 3072){
+            if(mbbannerindex == window.innerWidth*4){
                 bannerRoundA.style.backgroundColor = "#F7F1F1"
                 bannerRoundB.style.backgroundColor = "#8F8686"
                 bannerRoundC.style.backgroundColor = "#8F8686"
                 bannerRoundD.style.backgroundColor = "#8F8686"
 
-                mbbannerindex = -768;
+                mbbannerindex = window.innerWidth* -1;
                 setTimeout(function(){
                     mbBannerBgAlign.style.transition = "none";
                 },5000)
@@ -383,8 +383,8 @@ function mblinkControlBanner(e){
         bannerRoundC.style.backgroundColor = "#8F8686"
         bannerRoundD.style.backgroundColor = "#8F8686"
 
-        mbbannerindex = 768
-        mbBannerBgAlign.style.right = "768px"
+        mbbannerindex = window.innerWidth
+        mbBannerBgAlign.style.right = `${window.innerWidth}px`
     }
     if(e.target.id == "banner-round-C"){
         mbBannerBgAlign.style.transition = "1s"
@@ -393,8 +393,8 @@ function mblinkControlBanner(e){
         bannerRoundC.style.backgroundColor = "#F7F1F1"
         bannerRoundD.style.backgroundColor = "#8F8686"
 
-        mbbannerindex = 1536
-        mbBannerBgAlign.style.right = "1536px"
+        mbbannerindex = window.innerWidth*2
+        mbBannerBgAlign.style.right = `${window.innerWidth*2}px`
     }
     if(e.target.id == "banner-round-D"){
         mbBannerBgAlign.style.transition = "1s"
@@ -403,8 +403,8 @@ function mblinkControlBanner(e){
         bannerRoundC.style.backgroundColor = "#8F8686"
         bannerRoundD.style.backgroundColor = "#F7F1F1"
         
-        mbbannerindex = 2304
-        mbBannerBgAlign.style.right = "2304px"
+        mbbannerindex = window.innerWidth*3
+        mbBannerBgAlign.style.right = `${window.innerWidth*3}px`
     }
 
     mbbannerInterval = setInterval(mbbannerPush, 5000);
