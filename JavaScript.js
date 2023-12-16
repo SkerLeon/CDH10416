@@ -720,3 +720,36 @@ if(window.innerWidth>768){
         dogaboutConter[i].addEventListener("mouseleave", dogaboutDynamicEffectOut);
     };
 }
+
+//領養需知 動態效果
+let dogadoptionDate = document.getElementById("dogadoption-date")
+let dogadoptionDateBg = document.getElementById("dogadoption-date-bg")
+
+dogadoptionDate.addEventListener("mouseenter",function(){
+    if(window.innerWidth>768){
+        dogadoptionDateBg.style.transform = "scale(1.05)"
+    }
+});
+
+dogadoptionDate.addEventListener("mouseleave",function(){
+    if(window.innerWidth>768){
+        dogadoptionDateBg.style.transform = "scale(1)"
+    }
+});
+
+// // 領養資料填寫動態效果
+// let dogadopter = document.getElementById("dogadopter")
+// let dogadopterBg = document.getElementById("dogadopter-bg")
+
+// dogadopter.addEventListener("mouseenter",function(){
+//     if(window.innerWidth>768){
+//         dogadopterBg.style.transform = "scaleX(1.3)"
+//     } 
+// });
+    
+// dogadopter.addEventListener("mouseleave",function(){
+//     if(window.innerWidth>768){
+//         dogadopterBg.style.transform = "scaleX(1.2)"
+//     }
+// });
+
