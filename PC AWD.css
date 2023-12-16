@@ -67,8 +67,8 @@
         top: 2%;
         transform: scaleY(1.2);  
     }
-    .dogadopter-bg{
-        transform: scaleX(0.9);
+    .dogadopter-bg img{
+        transform: scaleX(1.1);
     }
 }
 @media (max-width:1600px) {
@@ -76,14 +76,8 @@
         top: 10%;
         transform: scaleY(1.35);  
     }
-    .dogadopter-bg{
-        transform: scaleX(0.8);
-    }
-}
-@media (max-width:1400px) {
-    .dogadoption-date-bg{
-        top: 18%;
-        transform: scaleY(1.8);  
+    .dogadopter-bg img{
+        transform: scaleX();
     }
 }
 @media (max-width:1300px) {
@@ -93,10 +87,10 @@
     }
     .dogadopter-bg{
         top: -5%;
-        transform: scale(0.85);
+        transform: scale(0.9);
     }
     .dogadopter-bg img{
-        transform: scaleX(1);
+        transform: scaleX(0.9);
     }
     .dogadopter-conter-inputs{
         gap: 30px;

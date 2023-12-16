@@ -721,35 +721,48 @@ if(window.innerWidth>768){
     };
 }
 
-//領養需知 動態效果
-let dogadoptionDate = document.getElementById("dogadoption-date")
-let dogadoptionDateBg = document.getElementById("dogadoption-date-bg")
+// 領養需知 動態效果
+let dogadoptionDate = document.getElementById("dogadoption-date");
+let dogadoptionDateBg = document.getElementById("dogadoption-date-bg");
 
-dogadoptionDate.addEventListener("mouseenter",function(){
-    if(window.innerWidth>768){
-        dogadoptionDateBg.style.transform = "scale(1.05)"
-    }
-});
+//確認有抓到這兩個變數在執行
+if (dogadoptionDate && dogadoptionDateBg) {
+    dogadoptionDate.addEventListener("mouseenter", function () {
+        if (window.innerWidth > 768) {
+            dogadoptionDateBg.style.transform = "scale(1.05)";
+        }
+    });
 
-dogadoptionDate.addEventListener("mouseleave",function(){
-    if(window.innerWidth>768){
-        dogadoptionDateBg.style.transform = "scale(1)"
-    }
-});
+    dogadoptionDate.addEventListener("mouseleave", function () {
+        if (window.innerWidth > 768) {
+            dogadoptionDateBg.style.transform = "scale(1)";
+        }
+    });
+}
 
-// // 領養資料填寫動態效果
-// let dogadopter = document.getElementById("dogadopter")
-// let dogadopterBg = document.getElementById("dogadopter-bg")
+// 領養資料填寫動態效果
+let dogadopterConter = document.getElementById("dogadopter-conter");
+let dogadopterBg = document.getElementById("dogadopter-bg");
 
-// dogadopter.addEventListener("mouseenter",function(){
-//     if(window.innerWidth>768){
-//         dogadopterBg.style.transform = "scaleX(1.3)"
-//     } 
-// });
-    
-// dogadopter.addEventListener("mouseleave",function(){
-//     if(window.innerWidth>768){
-//         dogadopterBg.style.transform = "scaleX(1.2)"
-//     }
-// });
+//確認有抓到這兩個變數在執行
+if (dogadopterConter && dogadopterBg) {
+    dogadopterConter.addEventListener("mouseenter", function () {
+        if (window.innerWidth > 768) {
+            dogadopterBg.style.transform = "scale(1)";
+        }
+        if (window.innerWidth > 1300) {
+            dogadopterBg.style.transform = "scale(1.1)";
+        }
+        
+    });
 
+    dogadopterConter.addEventListener("mouseleave", function () { 
+        
+        if (window.innerWidth > 768) {
+            dogadopterBg.style.transform = "scale(0.9)";
+        }
+        if (window.innerWidth > 1300) {
+            dogadopterBg.style.transform = "scale(1)";
+        }
+    });
+}

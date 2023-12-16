@@ -1359,7 +1359,7 @@ main{
 /* dogadopter css */
 .dogadopter{
     width: 71%;
-    margin: auto;
+    margin: 50px auto 50px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1375,7 +1375,6 @@ main{
 }
 .dogadopter-conter{
     width: 58%;
-    min-width: 578px;
     margin: 70px auto 100px;
     display: flex;
     flex-direction: column;
@@ -1430,6 +1429,8 @@ main{
 .dogadopter-bg{
     position: absolute;
     z-index: -1;
+    transform: scale(1);
+    transition: 0.3s;
 }
 .dogadopter-bg img{
     width: 100%;
