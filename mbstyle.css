@@ -13,7 +13,7 @@
         min-width:393px;
         width: 100%;
         display: block;
-        z-index: 1;
+        z-index: 2;
     }
     .mb-link{
         display: flex;
@@ -126,7 +126,7 @@
         display: block;
         width: 100%;
         position: absolute;
-        bottom:-1%;
+        bottom:-2%;
         z-index: 0;
     }
     .mb-banner-arc-pic img{
@@ -140,8 +140,10 @@
     .banner-round{
         width: 10px;
         height: 10px;
+        background-color: #8F8686;
         border: 2px solid white;
     }
+
 
     /* footer mb CSS */
     .mb-footer-bg{

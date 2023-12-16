@@ -185,7 +185,7 @@ main{
 }
 .banner-wave{
     position: absolute;
-    bottom: -1px;
+    bottom: 0px;
     left: 0px;
     vertical-align: middle;
     width: 100%;
