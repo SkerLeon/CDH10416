@@ -766,3 +766,134 @@ if (dogadopterConter && dogadopterBg) {
         }
     });
 }
+
+//dog show 按鈕篩選系統
+
+//建立所有按鈕的class
+let radios = document.getElementsByClassName("radio-hover")
+
+//建立抓取按鈕值的變數
+let gender = '未選取';
+let age = '未選取';
+let kg = '未選取';
+
+//把每個狗狗資料建立成陣列
+var dogsArray = [
+    {
+        element: document.getElementById('item-dog-01'),
+        dogname:'冰冰',
+        doggender:'公',
+        dogage:'3~8歲',
+        dogkg:'大型犬'
+    },
+    {
+        element: document.getElementById('item-dog-02'),
+        dogname:'陽陽',
+        doggender:'母',
+        dogage:'3~8歲',
+        dogkg:'大型犬'
+    },
+    {
+        element: document.getElementById('item-dog-03'),
+        dogname:'寶寶',
+        doggender:'公',
+        dogage:'0~1歲',
+        dogkg:'小型犬'
+    },
+    {
+        element: document.getElementById('item-dog-04'),
+        dogname:'橘子',
+        doggender:'母',
+        dogage:'8+歲',
+        dogkg:'中型犬'
+    },
+    {
+        element: document.getElementById('item-dog-05'),
+        dogname:'智智',
+        doggender:'公',
+        dogage:'3~8歲',
+        dogkg:'中型犬'
+    },
+    {
+        element: document.getElementById('item-dog-06'),
+        dogname:'花花',
+        doggender:'母',
+        dogage:'8+歲',
+        dogkg:'小型犬'
+    },
+    {
+        element: document.getElementById('item-dog-07'),
+        dogname:'風傲',
+        doggender:'母',
+        dogage:'3~8歲',
+        dogkg:'大型犬'
+    },
+    {
+        element: document.getElementById('item-dog-08'),
+        dogname:'大大',
+        doggender:'公',
+        dogage:'8+歲',
+        dogkg:'大型犬'
+    },
+    {
+        element: document.getElementById('item-dog-09'),
+        dogname:'多哥',
+        doggender:'公',
+        dogage:'3~8歲',
+        dogkg:'中型犬'
+    },
+    {
+        element: document.getElementById('item-dog-10'),
+        dogname:'莫忘',
+        doggender:'公',
+        dogage:'1~3歲',
+        dogkg:'小型犬'    
+    },
+    {
+        element: document.getElementById('item-dog-11'),
+        dogname:'雖雖',
+        doggender:'公',
+        dogage:'8+歲',
+        dogkg:'中型犬'
+    },
+    {
+        element: document.getElementById('item-dog-12'),
+        dogname:'勇士',
+        doggender:'母',
+        dogage:'5歲',
+        dogkg:'中型犬'
+    }
+]
+
+//抓取按鈕的值
+function genderFetchValue(e){
+    gender = e;
+}
+function ageFetchValue(e){
+    age = e;
+}
+function kgFetchValue(e){
+    kg = e;
+}
+
+function ScreeningJudgment(){
+    for(let i=0;i<dogsArray.length;i++){
+        // 把變數變成邏輯判斷布林值
+        //
+        let genderCondition = gender === '未選取' || dogsArray[i].doggender === gender;
+        let ageCondition = age === '未選取' || dogsArray[i].dogage === age;
+        let kgCondition = kg === '未選取' || dogsArray[i].dogkg === kg;
+
+        // 三種條件都符合的就顯示 否則隱藏
+        if (genderCondition && ageCondition && kgCondition) {
+            dogsArray[i].element.style.display = "flex";
+        } else {
+            dogsArray[i].element.style.display = "none";
+        }
+    }
+}
+
+//給予每個按鈕判斷函式
+for (let i = 0; i < radios.length; i++) {
+    radios[i].addEventListener("click", ScreeningJudgment);
+};

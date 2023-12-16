@@ -137,14 +137,14 @@
                             <h5>性別</h5>
                             <div class="filter-radio-gender radio-align radio-align-gender">
                                 <input type="radio" id="gender-male" name="filter-radio-gender" class="filter-radio">
-                                <label for="gender-male" class="gender-radio radio-hover">
+                                <label for="gender-male" class="gender-radio radio-hover" onclick="genderFetchValue('公')">
                                     <span class="radio-style">公</span>
                                 </label>
                                 
                                 <input type="radio" id="gender-female" name="filter-radio-gender" class="filter-radio">
-                                <label for="gender-female" class="gender-radio radio-hover">
+                                <label for="gender-female" class="gender-radio radio-hover" onclick="genderFetchValue('母')">
                                     <span class="radio-style">母</span>
-                                </label>
+                                </label>                                                          
                                 
                             </div>
                         </li>
@@ -155,21 +155,30 @@
                                 
                                 <div class="mb-radio-align">
                                     <input type="radio"  id="age-puppies" name="filter-radio-age" class="filter-radio">
-                                    <label for="age-puppies" class="age-radio radio-hover"><span class="radio-style">幼犬 0~1歲</span></label>
+                                    <label for="age-puppies" class="age-radio radio-hover" onclick="ageFetchValue('0~1歲')">
+                                        <span class="radio-style">幼犬 0~1歲</span>
+                                    </label>
     
                                     
                                     <input type="radio" id="age-teenagers" name="filter-radio-age" class="filter-radio">
-                                    <label for="age-teenagers" class="age-radio radio-hover"><span class="radio-style">青少犬 1~3歲</span></label>
+                                    <label for="age-teenagers" class="age-radio radio-hover" onclick="ageFetchValue('1~3歲')">
+                                        <span class="radio-style">青少犬 1~3歲
+                                    </span>
+                                    </label>
                                 </div>
                                 
                                 
                                 <div class="mb-radio-align">
                                     <input type="radio" id="age-adult" name="filter-radio-age" class="filter-radio">
-                                    <label for="age-adult" class="age-radio radio-hover"><span class="radio-style">成犬 3~8歲</span></label>
+                                    <label for="age-adult" class="age-radio radio-hover" onclick="ageFetchValue('3~8歲')">
+                                        <span class="radio-style">成犬 3~8歲</span>
+                                    </label>
     
                                     
                                     <input type="radio" id="age-old" name="filter-radio-age" class="filter-radio">
-                                    <label for="age-old" class="age-radio radio-hover"><span class="radio-style">老犬 8+歲</span></label> 
+                                    <label for="age-old" class="age-radio radio-hover" onclick="ageFetchValue('8+歲')">
+                                        <span class="radio-style">老犬 8+歲</span>
+                                    </label> 
                                 </div>   
                             </div>
                         </li>
@@ -180,17 +189,23 @@
                                 
                                 <div class="mb-radio-align">
                                     <input type="radio" id="weight-small" name="filter-radio-weight" class="filter-radio">
-                                    <label for="weight-small" class="weight-radio radio-hover"><span class="radio-style">小型犬 1~12公斤</span></label>
+                                    <label for="weight-small" class="weight-radio radio-hover" onclick="kgFetchValue('小型犬')">
+                                        <span class="radio-style">小型犬 1~12公斤</span>
+                                    </label>
     
                                     
                                     <input type="radio" id="weight-middle" name="filter-radio-weight" class="filter-radio">
-                                    <label for="weight-middle" class="weight-radio radio-hover"><span class="radio-style">中型犬 12~15公斤</span></label>
+                                    <label for="weight-middle" class="weight-radio radio-hover" onclick="kgFetchValue('中型犬')">
+                                        <span class="radio-style">中型犬 12~20公斤</span>
+                                    </label>
                                 </div>
 
                                 
                                 <div class="mb-radio-align">
                                     <input type="radio" id="weight-big" name="filter-radio-weight" class="filter-radio">
-                                    <label for="weight-big" class="weight-radio radio-hover"><span class="radio-style">大型犬 12~15公斤</span></label>
+                                    <label for="weight-big" class="weight-radio radio-hover" onclick="kgFetchValue('大型犬')">
+                                        <span class="radio-style">大型犬 20+公斤</span>
+                                    </label>
                                 </div>
     
                             </div>
@@ -252,7 +267,7 @@
                     </div>
                 </div>
                 <div class="item-dog-nickname" ><span id="item-dog-nickname03">愛心小短腿</span></div>
-                <p class="item-dog-introduce" id="item-dog-introduce03">寶寶．公．<br>2歲．10公斤</p>
+                <p class="item-dog-introduce" id="item-dog-introduce03">寶寶．公．<br>1歲．10公斤</p>
                 <h2 class="filter-item-h2" id="filter-item-h203">狗狗檔案</h2>
             </a>
 
@@ -267,7 +282,7 @@
                     </div>
                 </div>
                 <div class="item-dog-nickname" ><span id="item-dog-nickname04">文青少狗</span></div>
-                <p class="item-dog-introduce" id="item-dog-introduce04">橘子．母．<br>8歲．15公斤</p>
+                <p class="item-dog-introduce" id="item-dog-introduce04">橘子．母．<br>9歲．15公斤</p>
                 <h2 class="filter-item-h2" id="filter-item-h204">狗狗檔案</h2>
             </a>
             
@@ -282,7 +297,7 @@
                     </div>
                 </div>
                 <div class="item-dog-nickname" ><span id="item-dog-nickname05">智慧守護者</span></div>
-                <p class="item-dog-introduce" id="item-dog-introduce05">智智．公．<br>5歲．28公斤</p>
+                <p class="item-dog-introduce" id="item-dog-introduce05">智智．公．<br>5歲．18公斤</p>
                 <h2 class="filter-item-h2" id="filter-item-h205">狗狗檔案</h2>
             </a>
             
@@ -387,7 +402,7 @@
                     </div>
                 </div>
                 <div class="item-dog-nickname" ><span id="item-dog-nickname12">玩心大汪</span></div>
-                <p class="item-dog-introduce" id="item-dog-introduce12">勇士．母．<br>5歲．27公斤</p>
+                <p class="item-dog-introduce" id="item-dog-introduce12">勇士．母．<br>5歲．19公斤</p>
                 <h2 class="filter-item-h2" id="filter-item-h212">狗狗檔案</h2>
             </a>
             
