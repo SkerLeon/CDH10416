@@ -239,20 +239,20 @@
         font-size: 16px;
     }
     .about-content-a{
-        width: 90px;
-        height: 32px;
-        border-radius: 10px;
+        width: 110px;
+        height: 35px;
+        border-radius: 20px;
     }
     .about-content-a a{
-        font-size: 14px;
+        font-size: 18px;
     }
     .party-content-b{
-        width: 130px;
-        height: 32px;
-        border-radius: 10px;
+        width: 170px;
+        height: 35px;
+        border-radius: 20px;
     }
     .party-content-b a{
-        font-size: 14px;
+        font-size: 18px;
     }
     .index-user{
         flex-direction: column;
