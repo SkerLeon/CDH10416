@@ -1220,6 +1220,9 @@ main{
     gap: 59px;
     margin-bottom: 84px;
 }
+.dogdatails-conter-bigimg img{
+    border-radius: 67px;
+}
 .dogdatails-conter-text{
     display: flex;
     flex-direction: column;
@@ -1246,8 +1249,16 @@ main{
 }
 .conter-smallimg{
     display: flex;
-    gap: 20px;
+    gap: 35px;
     margin-bottom: 50px;
+}
+.conter-smallimg img{
+    width: 140px;
+    height: 170px;
+    border-radius: 30px;
+}
+.conter-smallimg img:hover{
+    cursor: pointer;
 }
 .conter-btn a {
     display: block;

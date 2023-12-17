@@ -870,7 +870,7 @@ let filterSearchReset = document.getElementById("filter-search-reset")
 
 //抓取按鈕的值
 function genderFetchValue(e){
-    gender = e;
+    gender = e; 
 }
 function ageFetchValue(e){
     age = e;
@@ -991,4 +991,90 @@ if(nowhtml.includes('dogdonate.html')){
     document.getElementById("donationamount-customize").addEventListener('keyup',CancelCustomAmount)
 }
 
+//狗狗詳細頁面點擊變化
+//變化頁面資料陣列
+let dogDogdatailsArray = [
+    {
+    //狗狗詳細資料大圖
+    bigImg:"pic/dogdatails-conter-0-1.jpg",
+    //狗狗詳細資料小圖
+    smallImg1:"pic/dogdatails-conter-0-1.jpg",
+    smallImg2:"pic/dogdatails-conter-0-2.jpg",
+    smallImg3:"pic/dogdatails-conter-0-3.jpg",
+    
+    //狗狗名字
+    dogname:'冰冰',
+    //狗狗簡介
+    dogIntroduction:
+    '是一位三歲、25公斤的哈士奇大男孩！冰冰的興趣多采多姿，熱愛戶外活動，尤其是追逐球和探險。他帶著激動的尾巴，總是散發著陽光般的活力。雖然他外表堅毅，但冰冰是一隻溫和友善的狗狗，喜歡與人和其他狗狗建立深厚的友誼。無論何時，冰冰都是活潑歡樂的夥伴！ ',
+    //狗狗性格
+    CharacterTraits:
+    '冰冰是一隻樂觀開朗、充滿活力的哈士奇公狗。他對人類充滿好奇心，時常透露著友善和親和力。冰冰非常社交化，喜歡和其他狗狗互動，也對新環境充滿探險精神。',
+    //狗狗醫療史
+    medicalHistory:
+    '冰冰保持了健康的生活習慣，接受定期的獸醫檢查和疫苗接種。他有良好的飲食習慣，體重穩定在25公斤，毛皮保持著光澤和清潔。',
+    //狗狗行為
+    BehavioralCharacteristics:
+    '這位哈士奇會表現出典型的活潑與好動，喜歡在戶外奔跑、追逐球。他總是保持警惕，對周圍的事物充滿好奇。冰冰的個性使他成為一位極具活力和歡樂的伙伴。',
+    //狗狗服從訓練
+    obedienceTraining:
+    '冰冰接受過基本的服從訓練，對基本指令有良好的反應。他喜歡學習新技能，是一個頗具潛力的訓練對象。與主人的互動中，他展現了良好的合作精神和服從性格。'
+},{
+    //陽光探險家黃金獵犬詳細資料大圖
+    bigImg: "pic/dogdatails-conter-1-1.jpg",
+    //陽光探險家黃金獵犬詳細資料小圖
+    smallImg1: "pic/dogdatails-conter-1-1.jpg",
+    smallImg2: "pic/dogdatails-conter-1-2.jpg",
+    smallImg3: "pic/dogdatails-conter-1-3.jpg",
 
+    //陽光探險家黃金獵犬名字
+    dogname: '陽陽',
+    //陽光探險家黃金獵犬簡介
+    dogIntroduction:
+    '陽陽，一位七歲、30公斤的陽光探險家黃金獵犬女孩。她熱愛戶外冒險，對探險充滿熱情。笑容如陽光，是穩重親人的夥伴。成熟卻充滿活力，陽陽是您家庭的完美選擇。無論是共度悠閒時光還是迎接挑戰，她都是最忠實的伙伴。',
+
+    //陽光探險家黃金獵犬性格
+    CharacterTraits:
+    '陽陽展現出成熟穩重的性格，笑容中散發著陽光。她對人充滿愛心，是值得信賴的伙伴。陽陽喜歡戶外冒險，對新事物充滿好奇。',
+
+    //陽光探險家黃金獵犬醫療史
+    medicalHistory:
+    '陽陽的健康狀態良好，接受定期的獸醫檢查和疫苗接種。她保持理想體重，享有良好飲食習慣，展現出卓越的生活品質。',
+
+    //陽光探險家黃金獵犬行為
+    BehavioralCharacteristics:
+    '陽陽成熟穩重，充滿活力。她對人充滿愛心，是值得信賴的伙伴。陽陽喜歡戶外冒險，對新事物充滿好奇。',
+
+    //陽光探險家黃金獵犬服從訓練
+    obedienceTraining:
+    '陽陽是一位頗具服從性格的狗狗，接受過基本的服從訓練，對主人的指令有著良好的反應。她喜歡學習新技能，展現出出色的合作精神。'
+}]
+
+let 
+
+
+
+
+
+//狗狗詳細頁面小圖換大圖
+let dogdatailsBigimg = document.getElementById("dogdatails-conter-bigimg")
+let conterSmallimgImg = document.getElementsByClassName("conter-smallimg-img")
+let conterSmallimg1 = document.getElementById("conter-smallimg1")
+let conterSmallimg2 = document.getElementById("conter-smallimg2")
+let conterSmallimg3 = document.getElementById("conter-smallimg3")
+
+function SmallPictureBecomesBigPicture (e){
+    if(e.target.id == "conter-smallimg1"){
+        dogdatailsBigimg.src = conterSmallimg1.src
+    }
+    if(e.target.id == "conter-smallimg2"){
+        dogdatailsBigimg.src = conterSmallimg2.src
+    }
+    if(e.target.id == "conter-smallimg3"){
+        dogdatailsBigimg.src = conterSmallimg3.src
+    }
+}
+
+for (let i = 0; i < conterSmallimgImg.length; i++) {
+    conterSmallimgImg[i].addEventListener("click",SmallPictureBecomesBigPicture)
+}
