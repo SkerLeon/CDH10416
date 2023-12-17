@@ -939,7 +939,7 @@ function SearchNameFilter(){
 
 //給搜尋的input設定一個偵測Enter鍵有沒有按下的事件監聽
 //先抓取目前的頁面
-const nowhtml = window.location.href
+let nowhtml = window.location.href
 
 //在加入判斷當是這個頁面時才執行
 if(nowhtml.includes('dogshow.html')){
@@ -987,5 +987,8 @@ function CancelCustomAmount(){
     }
 }
 
-document.getElementById("donationamount-customize").addEventListener('keyup',CancelCustomAmount)
+if(nowhtml.includes('dogdonate.html')){
+    document.getElementById("donationamount-customize").addEventListener('keyup',CancelCustomAmount)
+}
+
 
