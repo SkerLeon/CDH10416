@@ -991,6 +991,29 @@ if(nowhtml.includes('dogdonate.html')){
     document.getElementById("donationamount-customize").addEventListener('keyup',CancelCustomAmount)
 }
 
+//狗狗詳細頁面小圖換大圖
+let dogdatailsBigimg = document.getElementById("dogdatails-conter-bigimg")
+let conterSmallimgImg = document.getElementsByClassName("conter-smallimg-img")
+let conterSmallimg1 = document.getElementById("conter-smallimg1")
+let conterSmallimg2 = document.getElementById("conter-smallimg2")
+let conterSmallimg3 = document.getElementById("conter-smallimg3")
+
+function SmallPictureBecomesBigPicture (e){
+    if(e.target.id == "conter-smallimg1"){
+        dogdatailsBigimg.src = conterSmallimg1.src
+    }
+    if(e.target.id == "conter-smallimg2"){
+        dogdatailsBigimg.src = conterSmallimg2.src
+    }
+    if(e.target.id == "conter-smallimg3"){
+        dogdatailsBigimg.src = conterSmallimg3.src
+    }
+}
+
+for (let i = 0; i < conterSmallimgImg.length; i++) {
+    conterSmallimgImg[i].addEventListener("click",SmallPictureBecomesBigPicture)
+}
+
 //狗狗詳細頁面點擊變化
 //變化頁面資料陣列
 let dogDogdatailsArray = [
@@ -1048,33 +1071,329 @@ let dogDogdatailsArray = [
     //陽光探險家黃金獵犬服從訓練
     obedienceTraining:
     '陽陽是一位頗具服從性格的狗狗，接受過基本的服從訓練，對主人的指令有著良好的反應。她喜歡學習新技能，展現出出色的合作精神。'
+},{
+    //愛心小短腿柯基詳細資料大圖
+    bigImg: "pic/dogdatails-conter-2-1.jpg",
+    //愛心小短腿柯基詳細資料小圖
+    smallImg1: "pic/dogdatails-conter-2-1.jpg",
+    smallImg2: "pic/dogdatails-conter-2-2.jpg",
+    smallImg3: "pic/dogdatails-conter-2-3.jpg",
+
+    //愛心小短腿柯基名字
+    dogname: '寶寶',
+    //愛心小短腿柯基簡介
+    dogIntroduction:
+    '寶寶，是一隻一歲、10公斤的愛心小短腿柯基公狗。這位可愛的小夥伴擁有一顆充滿愛心的心靈，總是帶著歡樂的笑容點綴我們的生活。寶寶喜歡與人和其他狗狗互動，性格陽光可愛，是您家庭中的小太陽。雖然體型小巧，但寶寶的愛心和活力絕對是無限的，成為您生活的最佳伴侶。',
+
+    //愛心小短腿柯基性格
+    CharacterTraits:
+    '寶寶性格陽光可愛，擁有豐富的愛心。他喜歡與人和其他狗狗互動，是一位充滿活力和友善的伙伴。寶寶總是帶著微笑，為您的生活增添無限的溫暖。',
+
+    //愛心小短腿柯基醫療史
+    medicalHistory:
+    '寶寶的健康狀態良好，接受定期的獸醫檢查和疫苗接種。他保持理想體重，並享有良好的飲食習慣。寶寶是一位健康快樂的小夥伴。',
+
+    //愛心小短腿柯基行為
+    BehavioralCharacteristics:
+    '寶寶性格陽光可愛，總是充滿活力。他對人和其他狗狗都充滿好奇心，是一位熱愛互動的小夥伴。寶寶的笑容總是感染著周圍的每一個人。',
+
+    //愛心小短腿柯基服從訓練
+    obedienceTraining:
+    '寶寶接受過基本的服從訓練，對主人的指令有著良好的反應。他喜歡學習新技能，展現出頗具潛力的訓練對象。寶寶是一位聰明伶俐的小夥伴，會成為您生活中的愛心明星。'
+
+},{
+    //文青少狗柴犬詳細資料大圖
+    bigImg: "pic/dogdatails-conter-3-1.jpg",
+    //文青少狗柴犬詳細資料小圖
+    smallImg1: "pic/dogdatails-conter-3-1.jpg",
+    smallImg2: "pic/dogdatails-conter-3-2.jpg",
+    smallImg3: "pic/dogdatails-conter-3-3.jpg",
+
+    //文青少狗柴犬名字
+    dogname: '橘子',
+    //文青少狗柴犬簡介
+    dogIntroduction:
+    '橘子，是一位九歲、15公斤的文青少狗柴犬女孩。她擁有獨特的個性和文青氛圍，成為您生活中的小藝術家。橘子喜歡悠閒的午後，是一位愛好文學和藝術的知性狗狗。她的陶醉表情和溫暖的陪伴，讓您感受到悠然的生活。',
+
+    //文青少狗柴犬性格
+    CharacterTraits:
+    '橘子擁有獨特的文青氛圍，是一位喜歡悠閒生活的知性狗狗。她喜歡文學和藝術，總是在悠然的午後帶給您愉悅的陪伴。橘子的溫柔和愛心讓她成為您家中的小藝術家。',
+
+    //文青少狗柴犬醫療史
+    medicalHistory:
+    '橘子的健康狀態良好，接受定期的獸醫檢查和疫苗接種。她保持理想體重，並享有良好的飲食習慣。橘子是一位健康且知性的小夥伴。',
+
+    //文青少狗柴犬行為
+    BehavioralCharacteristics:
+    '橘子擁有文青的氛圍，喜歡悠閒生活。她在悠然的午後展現出知性的一面，讓您感受到藝術的美好。橘子的陶醉表情成為家中獨特的風景。',
+
+    //文青少狗柴犬服從訓練
+    obedienceTraining:
+    '橘子是一位知性的小夥伴，接受過基本的服從訓練。她對主人的指令有著良好的反應，展現出溫柔和合作的一面。橘子的知性特質使她成為家中的小藝術家，為您的生活增添色彩。'
+
+},{
+    //智慧守護者邊境牧羊犬詳細資料大圖
+    bigImg: "pic/dogdatails-conter-4-1.jpg",
+    //智慧守護者邊境牧羊犬詳細資料小圖
+    smallImg1: "pic/dogdatails-conter-4-1.jpg",
+    smallImg2: "pic/dogdatails-conter-4-2.jpg",
+    smallImg3: "pic/dogdatails-conter-4-3.jpg",
+
+    //智慧守護者邊境牧羊犬名字
+    dogname: '智智',
+    //智慧守護者邊境牧羊犬簡介
+    dogIntroduction:
+    '智智，是一隻五歲、18公斤的智慧守護者邊境牧羊犬公狗。他擁有非凡的智慧和堅定的守護精神，是您家庭的最佳守護者。智智對周圍環境充滿警覺，同時展現出友善和溫暖的一面，成為您的家庭成員。',
+
+    //智慧守護者邊境牧羊犬性格
+    CharacterTraits:
+    '智智擁有非凡的智慧和堅定的守護精神。他對周圍環境充滿警覺，同時展現出友善和溫暖的一面。智智是一位值得信賴的守護者，對家庭充滿愛心。',
+
+    //智慧守護者邊境牧羊犬醫療史
+    medicalHistory:
+    '智智的健康狀態良好，接受定期的獸醫檢查和疫苗接種。他保持理想體重，並擁有優良的飲食習慣。智智是一位健康且堅強的守護者。',
+
+    //智慧守護者邊境牧羊犬行為
+    BehavioralCharacteristics:
+    '智智展現出非凡的智慧和守護精神。他對周圍的事物保持警覺，同時向人類展現友善和愛心。智智是一位堅定而和善的家庭守護者，將帶給您安心和愉快的生活。',
+
+    //智慧守護者邊境牧羊犬服從訓練
+    obedienceTraining:
+    '智智接受過基本的服從訓練，對主人的指令有著良好的反應。他展現出守護本能，同時保持與家庭成員的親密互動。智智是一位值得信賴且聰明的守護者，將確保您的家庭安全和幸福。'
+
+},{
+    //棉花糖公主紅貴賓詳細資料大圖
+    bigImg: "pic/dogdatails-conter-5-1.jpg",
+    //棉花糖公主紅貴賓詳細資料小圖
+    smallImg1: "pic/dogdatails-conter-5-1.jpg",
+    smallImg2: "pic/dogdatails-conter-5-2.jpg",
+    smallImg3: "pic/dogdatails-conter-5-3.jpg",
+
+    //棉花糖公主紅貴賓名字
+    dogname: '花花',
+    //棉花糖公主紅貴賓簡介
+    dogIntroduction:
+    '花花，是一隻十歲、7公斤的棉花糖公主紅貴賓母狗。她擁有優雅的外表和溫暖的心靈，是您家庭的小公主。花花對人充滿愛心，並展現高雅的氛圍，猶如一朵綻放的花朵，將為您的生活帶來愉悅。',
+
+    //棉花糖公主紅貴賓性格
+    CharacterTraits:
+    '花花性格優雅且充滿愛心。她喜歡與人親密互動，同時展現高貴的氛圍。花花是一位文靜而友善的小公主，將成為您的忠實伴侶。',
+
+    //棉花糖公主紅貴賓醫療史
+    medicalHistory:
+    '花花的健康狀態良好，接受定期的獸醫檢查和疫苗接種。她保持理想體重，並享有優質的飲食習慣。花花是一位健康且活潑的小公主。',
+
+    //棉花糖公主紅貴賓行為
+    BehavioralCharacteristics:
+    '花花性格優雅且充滿愛心。她喜歡與人充分親密互動，同時表現出高貴的氛圍。花花是一位文靜而友善的小公主，將成為您生活中的陪伴。',
+
+    //棉花糖公主紅貴賓服從訓練
+    obedienceTraining:
+    '花花接受過基本的服從訓練，對主人的指令有著良好的反應。她展現出順從和聰明的特質，是一位值得信賴的家庭成員。花花將在您的生活中散發愛心，成為您家庭的小公主。'
+},{
+    //風雲神獸藏敖詳細資料大圖
+    bigImg: "pic/dogdatails-conter-6-1.jpg",
+    //風雲神獸藏敖詳細資料小圖
+    smallImg1: "pic/dogdatails-conter-6-1.jpg",
+    smallImg2: "pic/dogdatails-conter-6-2.jpg",
+    smallImg3: "pic/dogdatails-conter-6-3.jpg",
+
+    //風雲神獸藏敖名字
+    dogname: '風傲',
+    //風雲神獸藏敖簡介
+    dogIntroduction:
+    '風傲，是一隻三歲、40公斤的風雲神獸藏敖母狗。她擁有傲視群雄的外表和神秘的氛圍，是您家庭的風雲之選。風傲對主人忠心耿耿，同時展現出高貴的特質，將為您的生活帶來莫大的榮耀。',
+
+    //風雲神獸藏敖性格
+    CharacterTraits:
+    '風傲性格傲視群雄，同時擁有溫馨愛心。她對主人忠心耿耿，展現出高貴的氛圍。風傲是一位神秘而親切的伙伴，將成為您生活中的風雲之選。',
+
+    //風雲神獸藏敖醫療史
+    medicalHistory:
+    '風傲的健康狀態良好，接受定期的獸醫檢查和疫苗接種。她保持理想體重，並享有健康的飲食習慣。風傲是一位健康且活潑的神獸伙伴。',
+
+    //風雲神獸藏敖行為
+    BehavioralCharacteristics:
+    '風傲性格傲視群雄，同時擁有溫馨愛心。她對主人忠心耿耿，展現出高貴的特質。風傲是一位神秘而親切的伙伴，將成為您生活中的風雲之選。',
+
+    //風雲神獸藏敖服從訓練
+    obedienceTraining:
+    '風傲接受過基本的服從訓練，對主人的指令有著良好的反應。她展現出順從和聰明的特質，是一位值得信賴的家庭成員。風傲將為您的生活帶來風雲不減的榮耀，成為您家庭的神獸之選。'
+
+},{
+    //溫柔巨獸大丹犬詳細資料大圖
+    bigImg: "pic/dogdatails-conter-7-1.jpg",
+    //溫柔巨獸大丹犬詳細資料小圖
+    smallImg1: "pic/dogdatails-conter-7-1.jpg",
+    smallImg2: "pic/dogdatails-conter-7-2.jpg",
+    smallImg3: "pic/dogdatails-conter-7-3.jpg",
+
+    //溫柔巨獸大丹犬名字
+    dogname: '大大',
+    //溫柔巨獸大丹犬簡介
+    dogIntroduction:
+    '大大，是一隻十歲、20公斤的溫柔巨獸大丹犬公狗。他擁有強健的體格和溫和的性格，是一位親切的家庭成員。大大對主人忠誠守護，同時帶有一絲溫柔，成為您生活的巨大溫馨。',
+
+    //溫柔巨獸大丹犬性格
+    CharacterTraits:
+    '大大性格強健而溫和，是一位充滿愛心的家庭成員。他對主人忠誠守護，同時帶有一絲柔情。大大是一位親切可靠的伙伴，將為您的生活增添巨大的溫馨。',
+
+    //溫柔巨獸大丹犬醫療史
+    medicalHistory:
+    '大大的健康狀態良好，接受定期的獸醫檢查和疫苗接種。他保持理想體重，並享有健康的飲食習慣。大大是一位健康且活潑的巨獸伙伴。',
+
+    //溫柔巨獸大丹犬行為
+    BehavioralCharacteristics:
+    '大大性格強健而溫和，是一位充滿愛心的家庭成員。他對主人忠誠守護，同時帶有一絲柔情。大大是一位親切可靠的伙伴，將為您的生活增添巨大的溫馨。',
+
+    //溫柔巨獸大丹犬服從訓練
+    obedienceTraining:
+    '大大接受過基本的服從訓練，對主人的指令有著良好的反應。他展現出穩重和順從的特質，是一位值得信賴的家庭成員。大大的守護之心，將為您的生活帶來巨大的安慰和歡樂。'
+},{
+    //牧羊人救星德國牧羊犬詳細資料大圖
+    bigImg: "pic/dogdatails-conter-8-1.jpg",
+    //牧羊人救星德國牧羊犬詳細資料小圖
+    smallImg1: "pic/dogdatails-conter-8-1.jpg",
+    smallImg2: "pic/dogdatails-conter-8-2.jpg",
+    smallImg3: "pic/dogdatails-conter-8-3.jpg",
+
+    //牧羊人救星德國牧羊犬名字
+    dogname: '多哥',
+    //牧羊人救星德國牧羊犬簡介
+    dogIntroduction:
+    '多哥，是一隻四歲、15公斤的牧羊人救星德國牧羊犬公狗。他擁有出色的智慧和卓越的工作能力，是牧羊人的得力助手。多哥性格忠誠且敏捷，將為您的生活增添安全感和活力。',
+
+    //牧羊人救星德國牧羊犬性格
+    CharacterTraits:
+    '多哥性格忠誠且敏捷，擁有出色的智慧和卓越的工作能力。他是牧羊人的得力助手，對主人充滿忠誠。多哥是一位值得信賴和勇敢的夥伴，將為您的生活帶來安全感和活力。',
+
+    //牧羊人救星德國牧羊犬醫療史
+    medicalHistory:
+    '多哥的健康狀態良好，接受定期的獸醫檢查和疫苗接種。他保持理想體重，並享有健康的飲食習慣。多哥是一位健康且活潑的工作夥伴。',
+
+    //牧羊人救星德國牧羊犬行為
+    BehavioralCharacteristics:
+    '多哥性格忠誠且敏捷，擁有出色的智慧和卓越的工作能力。他是牧羊人的得力助手，對主人充滿忠誠。多哥是一位值得信賴和勇敢的夥伴，將為您的生活帶來安全感和活力。',
+
+    //牧羊人救星德國牧羊犬服從訓練
+    obedienceTraining:
+    '多哥接受過基本的服從訓練，對主人的指令有著良好的反應。他展現出順從和聰明的特質，是一位優秀的工作夥伴。多哥的助力之心，將為您的生活帶來更多的便利和歡樂。'
+
+},{
+    //出來喬阿吉娃娃詳細資料大圖
+    bigImg: "pic/dogdatails-conter-9-1.jpg",
+    //出來喬阿吉娃娃詳細資料小圖
+    smallImg1: "pic/dogdatails-conter-9-1.jpg",
+    smallImg2: "pic/dogdatails-conter-9-2.jpg",
+    smallImg3: "pic/dogdatails-conter-9-3.jpg",
+
+    //出來喬阿吉娃娃名字
+    dogname: '莫忘',
+    //出來喬阿吉娃娃簡介
+    dogIntroduction:
+    '莫忘，是一隻兩歲、2公斤的出來喬阿吉娃娃公狗。他小巧可愛，擁有獨特的個性。莫忘喜歡與人親近，帶給您無盡的歡樂和陪伴。儘管體型微小，他的熱情和活力卻是無限的。',
+
+    //出來喬阿吉娃娃性格
+    CharacterTraits:
+    '莫忘小巧可愛，擁有獨特的個性。他喜歡與人親近，是一位充滿熱情和活力的小夥伴。莫忘的陽光笑容，將為您的生活帶來無盡的歡樂。',
+
+    //出來喬阿吉娃娃醫療史
+    medicalHistory:
+    '莫忘的健康狀態良好，接受定期的獸醫檢查和疫苗接種。他保持理想體重，並享有健康的飲食習慣。莫忘是一位健康且快樂的小夥伴。',
+
+    //出來喬阿吉娃娃行為
+    BehavioralCharacteristics:
+    '莫忘小巧可愛，擁有獨特的個性。他喜歡與人親近，是一位充滿熱情和活力的小夥伴。莫忘的陽光笑容，將為您的生活帶來無盡的歡樂。',
+
+    //出來喬阿吉娃娃服從訓練
+    obedienceTraining:
+    '莫忘接受過基本的服從訓練，對主人的指令有著良好的反應。他展現出聰明和順從的特質，是一位容易教導且親近的小夥伴。莫忘的陽光性格，將為您的生活帶來更多的歡笑和愉悅。'
+
+},{
+    //整天只會吃的巴哥犬詳細資料大圖
+    bigImg: "pic/dogdatails-conter-10-1.jpg",
+    //整天只會吃的巴哥犬詳細資料小圖
+    smallImg1: "pic/dogdatails-conter-10-1.jpg",
+    smallImg2: "pic/dogdatails-conter-10-2.jpg",
+    smallImg3: "pic/dogdatails-conter-10-3.jpg",
+
+    //整天只會吃的巴哥犬名字
+    dogname: '雖雖',
+    //整天只會吃的巴哥犬簡介
+    dogIntroduction:
+    '雖雖，是一隻七歲、15公斤的整天只會吃的巴哥犬公狗。他對美食充滿熱愛，總是樂於享受美味。雖雖性格親人，是一位擁有獨特魅力的小夥伴。儘管整天追求美食，他的愛心和陽光笑容讓人難以抗拒。',
+
+    //整天只會吃的巴哥犬性格
+    CharacterTraits:
+    '雖雖性格親人，擁有獨特的魅力。他對美食充滿熱愛，是一位整天追求美味的小夥伴。雖雖的陽光笑容，總是為您帶來溫馨和歡笑。',
+
+    //整天只會吃的巴哥犬醫療史
+    medicalHistory:
+    '雖雖的健康狀態良好，接受定期的獸醫檢查和疫苗接種。他保持理想體重，並享有良好的飲食習慣。雖雖是一位健康且快樂的小夥伴。',
+
+    //整天只會吃的巴哥犬行為
+    BehavioralCharacteristics:
+    '雖雖性格親人，擁有獨特的魅力。他對美食充滿熱愛，是一位整天追求美味的小夥伴。雖雖的陽光笑容，總是為您帶來溫馨和歡笑。',
+
+    //整天只會吃的巴哥犬服從訓練
+    obedienceTraining:
+    '雖雖接受過基本的服從訓練，對主人的指令有著良好的反應。他展現出聰明和順從的特質，是一位容易教導且親近的小夥伴。雖雖的愛心和食量，將為您的生活增添更多樂趣和甜蜜回憶。'
+
+},{
+    //玩心大汪的英國鬥牛犬詳細資料大圖
+    bigImg: "pic/dogdatails-conter-11-1.jpg",
+    //玩心大汪的英國鬥牛犬詳細資料小圖
+    smallImg1: "pic/dogdatails-conter-11-1.jpg",
+    smallImg2: "pic/dogdatails-conter-11-2.jpg",
+    smallImg3: "pic/dogdatails-conter-11-3.jpg",
+
+    //玩心大汪的英國鬥牛犬名字
+    dogname: '勇士',
+    //玩心大汪的英國鬥牛犬簡介
+    dogIntroduction:
+    '勇士，是一隻五歲、19公斤的玩心大汪的英國鬥牛犬母狗。她擁有一顆玩心大汪的心靈，總是充滿活力和好奇心。勇士是您家庭中的小夥伴，陪伴您一同度過快樂時光。',
+
+    //玩心大汪的英國鬥牛犬性格
+    CharacterTraits:
+    '勇士性格充滿活力和好奇心，是一位真正的玩心大汪。她喜歡與人互動，是您家庭中的活潑陽光。勇士的愛心和獨特個性，總是讓人難以忘懷。',
+
+    //玩心大汪的英國鬥牛犬醫療史
+    medicalHistory:
+    '勇士的健康狀態良好，接受定期的獸醫檢查和疫苗接種。她保持理想體重，並享有良好的飲食習慣。勇士是一位健康且快樂的小夥伴。',
+
+    //玩心大汪的英國鬥牛犬行為
+    BehavioralCharacteristics:
+    '勇士性格充滿活力和好奇心，是一位真正的玩心大汪。她喜歡與人互動，是您家庭中的活潑陽光。勇士的愛心和獨特個性，總是讓人難以忘懷。',
+
+    //玩心大汪的英國鬥牛犬服從訓練
+    obedienceTraining:
+    '勇士接受過基本的服從訓練，對主人的指令有著良好的反應。她展現出聰明和順從的特質，是一位容易教導且親近的小夥伴。勇士的陽光笑容，將為您的生活增添更多歡笑和美好時光。'
+
 }]
+//抓取html標籤
+//圖片的id在小圖換大圖就有建立過了
+let dogName = document.getElementById("dogname")
+let dogIntroduction = document.getElementById("dogIntroduction")
+let CharacterTraits = document.getElementById("CharacterTraits")
+let medicalHistory = document.getElementById("medicalHistory")
+let BehavioralCharacteristics = document.getElementById("BehavioralCharacteristics")
+let obedienceTraining = document.getElementById("obedienceTraining")
 
-let 
+//抓取URL上的值
+const params = new URLSearchParams(window.location.search);
+const dogId = params.get('dog');
 
+//改變裡面的圖片
+dogdatailsBigimg.src = dogDogdatailsArray[dogId].bigImg;
+conterSmallimg1.src = dogDogdatailsArray[dogId].smallImg1;
+conterSmallimg2.src = dogDogdatailsArray[dogId].smallImg2;
+conterSmallimg3.src = dogDogdatailsArray[dogId].smallImg3;
 
+//改變裡面的內容
+dogName.innerHTML = dogDogdatailsArray[dogId].dogname;
+dogIntroduction.innerHTML = dogDogdatailsArray[dogId].dogIntroduction;
+CharacterTraits.innerHTML = dogDogdatailsArray[dogId].CharacterTraits;
+medicalHistory.innerHTML = dogDogdatailsArray[dogId].medicalHistory;
+BehavioralCharacteristics.innerHTML = dogDogdatailsArray[dogId].BehavioralCharacteristics;
+obedienceTraining.innerHTML = dogDogdatailsArray[dogId].obedienceTraining;
 
-
-
-//狗狗詳細頁面小圖換大圖
-let dogdatailsBigimg = document.getElementById("dogdatails-conter-bigimg")
-let conterSmallimgImg = document.getElementsByClassName("conter-smallimg-img")
-let conterSmallimg1 = document.getElementById("conter-smallimg1")
-let conterSmallimg2 = document.getElementById("conter-smallimg2")
-let conterSmallimg3 = document.getElementById("conter-smallimg3")
-
-function SmallPictureBecomesBigPicture (e){
-    if(e.target.id == "conter-smallimg1"){
-        dogdatailsBigimg.src = conterSmallimg1.src
-    }
-    if(e.target.id == "conter-smallimg2"){
-        dogdatailsBigimg.src = conterSmallimg2.src
-    }
-    if(e.target.id == "conter-smallimg3"){
-        dogdatailsBigimg.src = conterSmallimg3.src
-    }
-}
-
-for (let i = 0; i < conterSmallimgImg.length; i++) {
-    conterSmallimgImg[i].addEventListener("click",SmallPictureBecomesBigPicture)
-}
