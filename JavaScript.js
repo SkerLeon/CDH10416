@@ -938,11 +938,17 @@ function SearchNameFilter(){
 }
 
 //給搜尋的input設定一個偵測Enter鍵有沒有按下的事件監聽
-document.getElementById("filter-search").addEventListener("keyup",function(e){
-    if(e.key == "Enter"){
-        SearchNameFilter()
-    }
-})
+//先抓取目前的頁面
+const nowhtml = window.location.href
+
+//在加入判斷當是這個頁面時才執行
+if(nowhtml.includes('dogshow.html')){
+    document.getElementById("filter-search").addEventListener("keyup",function(e){
+        if(e.key == "Enter"){
+            SearchNameFilter()
+        }
+    })
+}
 
 
 
@@ -957,11 +963,29 @@ function ResetSearch(){
     SearchValue = ''
 
     //把按鈕的選中狀態關閉
-    for (let i = 0; i < radios.length; i++) {
+    for (let i = 0; i < inputradios.length; i++) {
         inputradios[i].checked = false;
     }
 
     //在執行一次函式去更新頁面上的顯示
     ScreeningJudgment()
 
-}   
+} 
+
+
+//捐款頁面新增輸入自訂金額取消radio效果
+let CustomAmount = 0
+let donationamountRadioStyle = document.getElementsByClassName("donationamount-radio-style")
+
+function CancelCustomAmount(){
+    CustomAmount = document.getElementById("donationamount-customize").value
+
+    if(CustomAmount !== 0){
+        for (let i = 0; i < donationamountRadioStyle.length; i++) {
+            donationamountRadioStyle[i].checked = false;
+        }
+    }
+}
+
+document.getElementById("donationamount-customize").addEventListener('keyup',CancelCustomAmount)
+
