@@ -507,6 +507,14 @@ main{
 .filter-search{
     position: absolute;
     right: 24%;
+    display: flex;
+    gap: 15px;
+}
+.filter-search-input{
+    position: relative;
+}
+.filter-search label:hover{
+    cursor: pointer;
 }
 .mb-radio-age-align{
     display: flex;
@@ -542,7 +550,24 @@ main{
     -webkit-appearance: none;
     appearance: none;
 }
-
+.filter-search-reset{
+    display: none;
+}
+.filter-search-reset>button{
+    width: 140px;
+    height: 52px;
+    background-color: #F6F3F3;
+    border: 3px solid #474143;
+    border-radius: 190px;
+    color: #474143;
+    font-size: 24px;
+    font-weight: bold;
+}
+.filter-search-reset>button:hover{
+    cursor: pointer;
+    background-color: #474143;
+    color: #F6F3F3;
+}
 .filter-radio{
     display: none;
 }

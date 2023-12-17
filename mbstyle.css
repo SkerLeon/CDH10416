@@ -321,9 +321,18 @@
         height: 34px;
         font-size: 14px;
         padding-left: 10px;
+        border: 2px solid #474143;
     }
     .filter-search{
         right: 0px;
+        flex-direction: column;
+        align-items: end;
+    }
+    .filter-search-reset>button{
+        width: 105px;
+        height: 34px;
+        font-size: 16px;
+        border: 2px solid #474143;
     }
     .filter-search img{
         width: 14px;

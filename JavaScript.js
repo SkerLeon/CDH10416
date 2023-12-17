@@ -767,8 +767,8 @@ if (dogadopterConter && dogadopterBg) {
     });
 }
 
-//dog show 按鈕篩選系統
-
+//dog show 篩選系統
+//按鈕篩選系統
 //建立所有按鈕的class
 let radios = document.getElementsByClassName("radio-hover")
 
@@ -865,6 +865,9 @@ var dogsArray = [
     }
 ]
 
+//重置搜尋功能的按鈕顯示 隱藏
+let filterSearchReset = document.getElementById("filter-search-reset")
+
 //抓取按鈕的值
 function genderFetchValue(e){
     gender = e;
@@ -878,18 +881,26 @@ function kgFetchValue(e){
 
 function ScreeningJudgment(){
     for(let i=0;i<dogsArray.length;i++){
-        // 把變數變成邏輯判斷布林值
-        //
+        // 把變數變成布林值
+        // 變數只有在值等於預設值或是狗狗詳細資料的值跟設定的值一樣時
+        //才回傳true 不然只有在狗狗詳細資料跟設定的值不一樣才傳false
         let genderCondition = gender === '未選取' || dogsArray[i].doggender === gender;
         let ageCondition = age === '未選取' || dogsArray[i].dogage === age;
         let kgCondition = kg === '未選取' || dogsArray[i].dogkg === kg;
 
-        // 三種條件都符合的就顯示 否則隱藏
+        // 如果布林值回傳true 就顯示
         if (genderCondition && ageCondition && kgCondition) {
             dogsArray[i].element.style.display = "flex";
         } else {
             dogsArray[i].element.style.display = "none";
         }
+    }
+
+    //判斷按鈕顯示 隱藏
+    if(gender !== '未選取' || age !== '未選取' || kg !== '未選取'){
+        filterSearchReset.style.display = "block"
+    } else{
+        filterSearchReset.style.display = "none"
     }
 }
 
@@ -897,3 +908,60 @@ function ScreeningJudgment(){
 for (let i = 0; i < radios.length; i++) {
     radios[i].addEventListener("click", ScreeningJudgment);
 };
+
+
+//搜尋名字篩選系統
+//建立抓取輸入框的值
+let SearchValue = ''
+
+//輸入框的值並抓資料判斷是不是一樣
+function SearchNameFilter(){
+    //抓取輸入的值
+    SearchValue = document.getElementById("filter-search").value
+
+    //判斷輸入的值符不符合
+    for(let i = 0;i<dogsArray.length;i++){
+        if(dogsArray[i].dogname == SearchValue){
+            dogsArray[i].element.style.display = "flex"
+        } else {
+            dogsArray[i].element.style.display = "none"
+        }
+    }
+
+    //判斷當沒有輸入內容時全部顯示
+    if(SearchValue == ''){
+        for(let i = 0;i<dogsArray.length;i++){
+            dogsArray[i].element.style.display = "flex"
+        }
+    }
+    
+}
+
+//給搜尋的input設定一個偵測Enter鍵有沒有按下的事件監聽
+document.getElementById("filter-search").addEventListener("keyup",function(e){
+    if(e.key == "Enter"){
+        SearchNameFilter()
+    }
+})
+
+
+
+//重置按鈕功能設定
+
+let inputradios = document.querySelectorAll('.filter-radio');
+function ResetSearch(){
+    //把所有的值回歸預設值
+    gender = '未選取'
+    age = '未選取'
+    kg = '未選取'
+    SearchValue = ''
+
+    //把按鈕的選中狀態關閉
+    for (let i = 0; i < radios.length; i++) {
+        inputradios[i].checked = false;
+    }
+
+    //在執行一次函式去更新頁面上的顯示
+    ScreeningJudgment()
+
+}   

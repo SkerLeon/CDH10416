@@ -215,8 +215,16 @@
                 </div>
 
                 <div class="filter-search">
-                    <input type="search" placeholder="使用名字搜尋" class="search-style" id="filter-search" name="filter-search">
-                    <label for="filter-search"><img src="pic/dogshow-search.svg" alt="搜尋icon"></label>
+                    <div class="filter-search-input">
+                        <input type="search" placeholder="使用名字搜尋" class="search-style" id="filter-search" name="filter-search">
+                        <label for="filter-search" onclick="SearchNameFilter()">
+                            <img src="pic/dogshow-search.svg" alt="搜尋icon">
+                        </label>
+                    </div>
+
+                    <div class="filter-search-reset" id="filter-search-reset">
+                        <button onclick="ResetSearch()">重置篩選</button>
+                    </div>
                 </div>
 
                 <div class="filter-img mbdpno">
