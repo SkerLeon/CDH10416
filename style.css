@@ -825,6 +825,13 @@ main{
     align-items: center;
     gap: 30px;
 }
+.item-content-author{
+    width: 83px;
+    height: 83px;
+}
+.item-content-author img{
+    width: 100%;
+}
 .video-item-content h2{
     font-size: 24px;
     font-weight: bold;

@@ -116,4 +116,14 @@
     .video-item iframe{
         height: 220px;
     }
+    .item-content-text h2{
+        font-size: 18px;
+    }
+    .item-content-text p{
+        font-size: 16px;
+    }
+    .item-content-author{
+        width: 70px;
+        height: 70px;
+    }
 }
