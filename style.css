@@ -1095,6 +1095,9 @@ main{
     position: absolute;
     top: 27%;
 }
+.donationamount-radio-img img{
+    transition: 0.3s;
+}
 
 .donationamount-customize{
     width: 100%;

@@ -1415,3 +1415,19 @@ if(nowhtml.includes('dogdetails.html')){
     BehavioralCharacteristics.innerHTML = dogDogdatailsArray[dogId].BehavioralCharacteristics;
     obedienceTraining.innerHTML = dogDogdatailsArray[dogId].obedienceTraining;
 }
+
+//捐款hover效果
+
+let donationamountDadio = document.getElementById("donationamount-radio")
+
+let radioImg = document.getElementById("radio-img")
+
+function DonationHoverEffectIn(){
+    radioImg.style.transform = "scale(1.1)"
+}
+function DonationHoverEffectOut(){
+    radioImg.style.transform = "scale(1)"
+}
+
+donationamountDadio.addEventListener("mouseenter",DonationHoverEffectIn)
+donationamountDadio.addEventListener("mouseleave",DonationHoverEffectOut)
