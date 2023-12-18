@@ -59,7 +59,9 @@
     .footer-logo img{
         width: 80%;
     }
-    
+    .dogdonate-decorate02{
+        top: 2600px;
+    }
 }
 @media (max-width:1800px) {
     .dogadoption-date-bg{
@@ -72,6 +74,10 @@
     .video-item iframe{
         height: 280px;
     }
+    .dogadoption-decorate02{
+        position: absolute;
+        top: 90vh;
+    }
 }
 @media (max-width:1600px) {
     .dogadoption-date-bg{
@@ -83,6 +89,10 @@
     }
     .video-item iframe{
         height: 250px;
+    }
+    .dogadoption-decorate02{
+        position: absolute;
+        top: 100vh;
     }
 }
 @media (max-width:1300px) {
@@ -124,5 +134,9 @@
     .item-content-author{
         width: 70px;
         height: 70px;
+    }
+    .dogadoption-decorate02{
+        position: absolute;
+        top: 150vh;
     }
 }
