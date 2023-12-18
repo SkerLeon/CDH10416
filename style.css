@@ -18,6 +18,7 @@ header{
 }
 main{
     margin-bottom: 5%;
+    position: relative;
 }
 .link{
     display: flex;
@@ -346,6 +347,7 @@ main{
     justify-content: space-between;
     align-items: center;
     gap: 16px;
+
 }
 .index-content h1{
     font-size: 28px;
@@ -876,7 +878,7 @@ main{
     transition: 0.3s;
 }
 .activity-item-text{
-    width: 40%;
+    width: 32%
 }
 .activity-item-text h2{
     font-size: 28px;
