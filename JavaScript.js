@@ -204,28 +204,28 @@ function bannerPush(){
         //偵測position的數值去執行切換效果
         if(bannerindex < 7680){
             if(bannerindex == -1920){
-                bannerRoundA.style.backgroundColor = "#F7F1F1"
+                bannerRoundA.style.backgroundColor = "white"
                 bannerRoundB.style.backgroundColor = "#8F8686"
                 bannerRoundC.style.backgroundColor = "#8F8686"
                 bannerRoundD.style.backgroundColor = "#8F8686"
             }
             if(bannerindex == 0){
                 bannerRoundA.style.backgroundColor = "#8F8686"
-                bannerRoundB.style.backgroundColor = "#F7F1F1"
+                bannerRoundB.style.backgroundColor = "white"
                 bannerRoundC.style.backgroundColor = "#8F8686"
                 bannerRoundD.style.backgroundColor = "#8F8686"
             }
             if(bannerindex == 1920){
                 bannerRoundA.style.backgroundColor = "#8F8686"
                 bannerRoundB.style.backgroundColor = "#8F8686"
-                bannerRoundC.style.backgroundColor = "#F7F1F1"
+                bannerRoundC.style.backgroundColor = "white"
                 bannerRoundD.style.backgroundColor = "#8F8686"
             }
             if(bannerindex == 3840){
                 bannerRoundA.style.backgroundColor = "#8F8686"
                 bannerRoundB.style.backgroundColor = "#8F8686"
                 bannerRoundC.style.backgroundColor = "#8F8686"
-                bannerRoundD.style.backgroundColor = "#F7F1F1"
+                bannerRoundD.style.backgroundColor = "white"
             }
             
             bannerindex+= 1920;
@@ -254,7 +254,7 @@ function linkControlBanner(e){
 
     if(e.target.id == "banner-round-A"){
         bannerBgAlign.style.transition = "1s"
-        bannerRoundA.style.backgroundColor = "#F7F1F1"
+        bannerRoundA.style.backgroundColor = "white"
         bannerRoundB.style.backgroundColor = "#8F8686"
         bannerRoundC.style.backgroundColor = "#8F8686"
         bannerRoundD.style.backgroundColor = "#8F8686"
@@ -265,7 +265,7 @@ function linkControlBanner(e){
     if(e.target.id == "banner-round-B"){
         bannerBgAlign.style.transition = "1s"
         bannerRoundA.style.backgroundColor = "#8F8686"
-        bannerRoundB.style.backgroundColor = "#F7F1F1"
+        bannerRoundB.style.backgroundColor = "white"
         bannerRoundC.style.backgroundColor = "#8F8686"
         bannerRoundD.style.backgroundColor = "#8F8686"
 
@@ -276,7 +276,7 @@ function linkControlBanner(e){
         bannerBgAlign.style.transition = "1s"
         bannerRoundA.style.backgroundColor = "#8F8686"
         bannerRoundB.style.backgroundColor = "#8F8686"
-        bannerRoundC.style.backgroundColor = "#F7F1F1"
+        bannerRoundC.style.backgroundColor = "white"
         bannerRoundD.style.backgroundColor = "#8F8686"
 
         bannerindex = 3840
@@ -287,7 +287,7 @@ function linkControlBanner(e){
         bannerRoundA.style.backgroundColor = "#8F8686"
         bannerRoundB.style.backgroundColor = "#8F8686"
         bannerRoundC.style.backgroundColor = "#8F8686"
-        bannerRoundD.style.backgroundColor = "#F7F1F1"
+        bannerRoundD.style.backgroundColor = "white"
         
         bannerindex = 5760
         bannerBgAlign.style.right = "5760px"
@@ -318,28 +318,28 @@ function mbbannerPush(){
         //偵測position的數值去執行切換效果
         if(mbbannerindex < window.innerWidth*4){
             if(mbbannerindex == window.innerWidth * -1){
-                bannerRoundA.style.backgroundColor = "#F7F1F1"
+                bannerRoundA.style.backgroundColor = "white"
                 bannerRoundB.style.backgroundColor = "#8F8686"
                 bannerRoundC.style.backgroundColor = "#8F8686"
                 bannerRoundD.style.backgroundColor = "#8F8686"
             }
             if(mbbannerindex == 0){
                 bannerRoundA.style.backgroundColor = "#8F8686"
-                bannerRoundB.style.backgroundColor = "#F7F1F1"
+                bannerRoundB.style.backgroundColor = "white"
                 bannerRoundC.style.backgroundColor = "#8F8686"
                 bannerRoundD.style.backgroundColor = "#8F8686"
             }
             if(mbbannerindex == window.innerWidth*2 ){
                 bannerRoundA.style.backgroundColor = "#8F8686"
                 bannerRoundB.style.backgroundColor = "#8F8686"
-                bannerRoundC.style.backgroundColor = "#F7F1F1"
+                bannerRoundC.style.backgroundColor = "white"
                 bannerRoundD.style.backgroundColor = "#8F8686"
             }
             if(mbbannerindex == window.innerWidth*3){
                 bannerRoundA.style.backgroundColor = "#8F8686"
                 bannerRoundB.style.backgroundColor = "#8F8686"
                 bannerRoundC.style.backgroundColor = "#8F8686"
-                bannerRoundD.style.backgroundColor = "#F7F1F1"
+                bannerRoundD.style.backgroundColor = "white"
             }
             
             mbbannerindex+= window.innerWidth;
@@ -347,7 +347,7 @@ function mbbannerPush(){
             mbBannerBgAlign.style.transition = "1s";
             //當值到3072時5秒後自動設定動畫過度效果為無
             if(mbbannerindex == window.innerWidth*4){
-                bannerRoundA.style.backgroundColor = "#F7F1F1"
+                bannerRoundA.style.backgroundColor = "white"
                 bannerRoundB.style.backgroundColor = "#8F8686"
                 bannerRoundC.style.backgroundColor = "#8F8686"
                 bannerRoundD.style.backgroundColor = "#8F8686"
@@ -368,7 +368,7 @@ function mblinkControlBanner(e){
 
     if(e.target.id == "banner-round-A"){
         mbBannerBgAlign.style.transition = "1s"
-        bannerRoundA.style.backgroundColor = "#F7F1F1"
+        bannerRoundA.style.backgroundColor = "white"
         bannerRoundB.style.backgroundColor = "#8F8686"
         bannerRoundC.style.backgroundColor = "#8F8686"
         bannerRoundD.style.backgroundColor = "#8F8686"
@@ -379,7 +379,7 @@ function mblinkControlBanner(e){
     if(e.target.id == "banner-round-B"){
         mbBannerBgAlign.style.transition = "1s"
         bannerRoundA.style.backgroundColor = "#8F8686"
-        bannerRoundB.style.backgroundColor = "#F7F1F1"
+        bannerRoundB.style.backgroundColor = "white"
         bannerRoundC.style.backgroundColor = "#8F8686"
         bannerRoundD.style.backgroundColor = "#8F8686"
 
@@ -390,7 +390,7 @@ function mblinkControlBanner(e){
         mbBannerBgAlign.style.transition = "1s"
         bannerRoundA.style.backgroundColor = "#8F8686"
         bannerRoundB.style.backgroundColor = "#8F8686"
-        bannerRoundC.style.backgroundColor = "#F7F1F1"
+        bannerRoundC.style.backgroundColor = "white"
         bannerRoundD.style.backgroundColor = "#8F8686"
 
         mbbannerindex = window.innerWidth*2
@@ -401,7 +401,7 @@ function mblinkControlBanner(e){
         bannerRoundA.style.backgroundColor = "#8F8686"
         bannerRoundB.style.backgroundColor = "#8F8686"
         bannerRoundC.style.backgroundColor = "#8F8686"
-        bannerRoundD.style.backgroundColor = "#F7F1F1"
+        bannerRoundD.style.backgroundColor = "white"
         
         mbbannerindex = window.innerWidth*3
         mbBannerBgAlign.style.right = `${window.innerWidth*3}px`
