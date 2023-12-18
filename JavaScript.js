@@ -880,6 +880,12 @@ function kgFetchValue(e){
 }
 
 function ScreeningJudgment(){
+    //偵測顯示訊息的數值
+    let DetectHiddenValues = 0;
+
+    //抓顯示訊息的div
+    let filterMessage = document.getElementById("filter-message")
+
     for(let i=0;i<dogsArray.length;i++){
         // 把變數變成布林值
         // 變數只有在值等於預設值或是狗狗詳細資料的值跟設定的值一樣時
@@ -893,7 +899,17 @@ function ScreeningJudgment(){
             dogsArray[i].element.style.display = "flex";
         } else {
             dogsArray[i].element.style.display = "none";
-        }
+            //當物件被隱藏起來時 增加數值
+            DetectHiddenValues+=1 ;
+            console.log(DetectHiddenValues)
+        } 
+    }
+    
+    //判斷顯示訊息跟隱藏
+    if(DetectHiddenValues == 12){
+        filterMessage.style.display = "block"
+    } else{
+        filterMessage.style.display = "none"
     }
 
     //判斷按鈕顯示 隱藏
@@ -902,6 +918,8 @@ function ScreeningJudgment(){
     } else{
         filterSearchReset.style.display = "none"
     }
+
+
 }
 
 //給予每個按鈕判斷函式
@@ -1379,21 +1397,23 @@ let medicalHistory = document.getElementById("medicalHistory")
 let BehavioralCharacteristics = document.getElementById("BehavioralCharacteristics")
 let obedienceTraining = document.getElementById("obedienceTraining")
 
-//抓取URL上的值
-const params = new URLSearchParams(window.location.search);
-const dogId = params.get('dog');
+//設定只有在這個頁面才執行這個功能
+if(nowhtml.includes('dogdetails.html')){
+    //抓取URL上的值
+    const params = new URLSearchParams(window.location.search);
+    const dogId = params.get('dog');
 
-//改變裡面的圖片
-dogdatailsBigimg.src = dogDogdatailsArray[dogId].bigImg;
-conterSmallimg1.src = dogDogdatailsArray[dogId].smallImg1;
-conterSmallimg2.src = dogDogdatailsArray[dogId].smallImg2;
-conterSmallimg3.src = dogDogdatailsArray[dogId].smallImg3;
+    //改變裡面的圖片
+    dogdatailsBigimg.src = dogDogdatailsArray[dogId].bigImg;
+    conterSmallimg1.src = dogDogdatailsArray[dogId].smallImg1;
+    conterSmallimg2.src = dogDogdatailsArray[dogId].smallImg2;
+    conterSmallimg3.src = dogDogdatailsArray[dogId].smallImg3;
 
-//改變裡面的內容
-dogName.innerHTML = dogDogdatailsArray[dogId].dogname;
-dogIntroduction.innerHTML = dogDogdatailsArray[dogId].dogIntroduction;
-CharacterTraits.innerHTML = dogDogdatailsArray[dogId].CharacterTraits;
-medicalHistory.innerHTML = dogDogdatailsArray[dogId].medicalHistory;
-BehavioralCharacteristics.innerHTML = dogDogdatailsArray[dogId].BehavioralCharacteristics;
-obedienceTraining.innerHTML = dogDogdatailsArray[dogId].obedienceTraining;
-
+    //改變裡面的內容
+    dogName.innerHTML = dogDogdatailsArray[dogId].dogname;
+    dogIntroduction.innerHTML = dogDogdatailsArray[dogId].dogIntroduction;
+    CharacterTraits.innerHTML = dogDogdatailsArray[dogId].CharacterTraits;
+    medicalHistory.innerHTML = dogDogdatailsArray[dogId].medicalHistory;
+    BehavioralCharacteristics.innerHTML = dogDogdatailsArray[dogId].BehavioralCharacteristics;
+    obedienceTraining.innerHTML = dogDogdatailsArray[dogId].obedienceTraining;
+}

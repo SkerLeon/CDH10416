@@ -404,7 +404,9 @@
         right: 10px;
         top: 15px;
     }
-    
+    .filter-message{
+        width: 90%;
+    }
 
     /* dogtalk MB CSS */
     .dog-video{

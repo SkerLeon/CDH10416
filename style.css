@@ -775,8 +775,14 @@ main{
     padding-top: 13px;
     transition: 0.3s;
 }
-
-
+.filter-message{
+    display: none;
+    width: 40%;
+    margin: auto;
+}
+.filter-message img{
+    width: 100%;
+}
 
 /* dog talk css */
 .dog-video{
