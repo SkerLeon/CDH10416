@@ -365,16 +365,17 @@
         width: 105px;
         height: 29px;
         top: 40%;
-
     }
     .item-dog-nickname span{
         font-size: 16px;
         letter-spacing: 2px;
+        color: #000;
     }
     .item-dog-introduce{
         font-size: 14px;
         line-height: 20px;
         margin-bottom: 10px;
+        color: #000;
     }
     .filter-item-h2{
         width: 96px;
