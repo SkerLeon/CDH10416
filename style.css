@@ -271,7 +271,7 @@ main{
 /* index css*/
 .index-universal{
     display: flex;
-    gap: 40px;  
+    gap: 100px;  
 }
 .index-pic{
     width: 365px;
@@ -411,13 +411,12 @@ main{
 }
 .index-user{
     display: flex;
-    align-items: start; 
-    width: 870px;   
-    gap: 10px;
+    justify-content: space-between;
+    width: 907px;   
     margin-top: 30px;
 }
 .user{
-    width: 33.33%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -431,7 +430,7 @@ main{
     position: relative;
 }
 .user-img{
-    width: 78%;
+    width: 211px;
     height: 83%;
 }
 .user-img img{
@@ -485,8 +484,8 @@ main{
 }
 .filter-content{
     display: flex;
-    justify-content: center;
-    width: 1023px;
+    justify-content: space-between;
+    width: 1100px;
     position: relative;
 }
 .filter-nav-list{
@@ -506,7 +505,7 @@ main{
 }
 .filter-search{
     position: absolute;
-    right: 24%;
+    right: 20%;
     display: flex;
     gap: 15px;
 }
@@ -556,7 +555,7 @@ main{
 .filter-search-reset>button{
     width: 140px;
     height: 52px;
-    background-color: #F6F3F3;
+    background-color: #fff;
     border: 3px solid #474143;
     border-radius: 190px;
     color: #474143;
@@ -617,7 +616,7 @@ main{
 }
 .filter-item{
     width: 54%;
-    min-width: 1023px;
+    min-width: 1100px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -860,7 +859,7 @@ main{
     margin-bottom: 51px;
 }
 .dog-activity-items{
-    width: 861px;
+    width: 1100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -870,15 +869,14 @@ main{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    gap: 120px;
+    justify-content: space-around;
 }
 .activity-item-img img{
     width: 100%;
     transition: 0.3s;
 }
 .activity-item-text{
-    width: 42%;
+    width: 40%;
 }
 .activity-item-text h2{
     font-size: 28px;

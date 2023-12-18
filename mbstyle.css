@@ -268,6 +268,9 @@
         width: 170px;
         height: 170px;
     }
+    .user-img{
+        width: 125px;
+    }
     .user-img-dotted{
         top: -22px;
     }
@@ -422,7 +425,7 @@
     }
     .video-item{
         width: 90%;
-        align-items: center;
+        align-items: start;
     }
     .video-item iframe{
         width: 100%;
@@ -431,13 +434,17 @@
     .video-item-content{
         gap: 13px;
     }
+    .item-content-author{
+        width: 60px;
+        height: 60px;
+    }
     .item-content-author img{
         width: 60px;
         height: 60px;
     }
     .item-content-text h2{
         font-size: 14px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
     .item-content-text p{
         font-size: 14px;
