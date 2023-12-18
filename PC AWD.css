@@ -70,6 +70,9 @@
     .dogadopter-bg img{
         transform: scaleX(1.1);
     }
+    .video-item iframe{
+        height: 280px;
+    }
 }
 @media (max-width:1600px) {
     .dogadoption-date-bg{
@@ -78,6 +81,9 @@
     }
     .dogadopter-bg img{
         transform: scaleX();
+    }
+    .video-item iframe{
+        height: 250px;
     }
 }
 @media (max-width:1300px) {
@@ -107,5 +113,7 @@
     .dogadopter h2{
         font-size: 20px;
     }
-
+    .video-item iframe{
+        height: 220px;
+    }
 }

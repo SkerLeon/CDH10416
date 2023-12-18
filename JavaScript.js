@@ -918,8 +918,6 @@ function ScreeningJudgment(){
     } else{
         filterSearchReset.style.display = "none"
     }
-
-
 }
 
 //給予每個按鈕判斷函式
