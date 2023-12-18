@@ -655,8 +655,9 @@ main{
 }
 .dog-pic-dotted{
     width: 100%;
+    transform: scaleY(0.98);
     position: absolute;
-    top: -35px;
+    top: -45px;
 }
 .dog-pic-dotted img{
     width: 100%;
