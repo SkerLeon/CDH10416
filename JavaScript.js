@@ -1423,11 +1423,16 @@ let donationamountDadio = document.getElementById("donationamount-radio")
 let radioImg = document.getElementById("radio-img")
 
 function DonationHoverEffectIn(){
+    if (window.innerWidth > 768) {
     radioImg.style.transform = "scale(1.1)"
+    }
 }
 function DonationHoverEffectOut(){
+    if (window.innerWidth > 768) {
     radioImg.style.transform = "scale(1)"
+    }
 }
+
 
 donationamountDadio.addEventListener("mouseenter",DonationHoverEffectIn)
 donationamountDadio.addEventListener("mouseleave",DonationHoverEffectOut)
