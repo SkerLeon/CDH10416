@@ -78,6 +78,7 @@
         position: absolute;
         top: 90vh;
     }
+    
 }
 @media (max-width:1600px) {
     .dogadoption-date-bg{
@@ -93,6 +94,14 @@
     .dogadoption-decorate02{
         position: absolute;
         top: 100vh;
+    }
+    .dogtalk-decorate02{
+        top: 130vh;
+    }
+}
+@media (max-width:1500px) {
+    .dogtalk-decorate02{
+        top: 150vh;
     }
 }
 @media (max-width:1300px) {
@@ -137,6 +146,9 @@
     }
     .dogadoption-decorate02{
         position: absolute;
+        top: 150vh;
+    }
+    .dogtalk-decorate02{
         top: 150vh;
     }
 }
