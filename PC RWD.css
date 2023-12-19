@@ -82,8 +82,8 @@
 }
 @media (max-width:1600px) {
     .dogadoption-date-bg{
-        top: 10%;
-        transform: scaleY(1.35);  
+        top: 7%;
+        transform: scaleY(1.3);  
     }
     .dogadopter-bg img{
         transform: scaleX();
@@ -102,6 +102,9 @@
 @media (max-width:1500px) {
     .dogtalk-decorate02{
         top: 150vh;
+    }
+    .dogadoption-date-bg{
+        transform: scaleY(1.45);
     }
 }
 @media (max-width:1300px) {
