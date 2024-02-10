@@ -810,7 +810,7 @@ main{
 }
 .dogshow-decorate02{
     position: absolute;
-    top: 2100px;
+    bottom: -17vw;
 }
 /* dog talk css */
 .dog-video{
@@ -877,7 +877,7 @@ main{
 }
 .dogtalk-decorate02{
     position: absolute;
-    top: 130vh;
+    top: 128vh;
 }
 /* singledogparty css */
 .dog-activity{
